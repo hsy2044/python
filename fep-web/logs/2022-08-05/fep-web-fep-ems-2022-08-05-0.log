@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:34" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI019010</Message><ProgramName>UI_019010</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:34" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>1</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:34" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>2</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:34" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>3</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:34" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>4</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:35" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>5</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:35" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>6</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2022/08/05" Time="15:59:35" HostName="DESKTOP-PKUIKBF" HostIP="172.16.40.72" Application="TxHelper.java" Line="466">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="MBankExceptionalCheckIn" Description="來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_019010</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20220805</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</Remark><ReturnCode>MBankExceptionalCheckIn</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1610</ExternalCode><ResponseMessage>晶片卡共用系統(2500) EX. CHECK IN 完成</ResponseMessage><Notification>true</Notification><Step>7</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup>1</MessageGroup><MessageParm13>晶片卡共用系統(2500)</MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11610, (系統名稱)  EX. CHECK IN 完成![晶片卡共用系統(2500) EX. CHECK IN 完成]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1610</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>

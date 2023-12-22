@@ -1,0 +1,711 @@
+[2023-05-03 16:03:41.680][background-preinit][INFO ][org.hibernate.validator.internal.util.Version]HV000001: Hibernate Validator 6.2.0.Final
+[2023-05-03 16:03:41.832][restartedMain][INFO ][com.syscom.fep.web.SyscomFepWebApplication]Starting SyscomFepWebApplication using Java 17.0.6 on UX410UAR with PID 13400 (D:\TCBFEP\source\fep\fep-web\target\classes started by User in D:\TCBFEP\source\fep\fep-web)
+[2023-05-03 16:03:41.833][restartedMain][DEBUG][com.syscom.fep.web.SyscomFepWebApplication]Running with Spring Boot v2.6.3, Spring v5.3.15
+[2023-05-03 16:03:41.834][restartedMain][INFO ][com.syscom.fep.web.SyscomFepWebApplication]The following profiles are active: mybatis,integration,scheduler,jms,safeaa,web,devtools
+[2023-05-03 16:03:49.210][restartedMain][INFO ][com.syscom.fep.frmcommon.boot.EmbeddedServletContainerConfig]Embedded Servlet Container Configuration:
+  baseDir = /home/syscom/tmp/fep-web/basedir/
+  docRoot = /home/syscom/tmp/fep-web/docroot/
+
+[2023-05-03 16:03:49.407][restartedMain][DEBUG][com.syscom.fep.frmcommon.boot.EmbeddedServletContainerConfig]Mkdirs Succeed, directory = [/home/syscom/tmp/fep-web/basedir/]
+[2023-05-03 16:03:49.408][restartedMain][DEBUG][com.syscom.fep.frmcommon.boot.EmbeddedServletContainerConfig]Mkdirs Succeed, directory = [/home/syscom/tmp/fep-web/docroot/]
+[2023-05-03 16:03:51.924][restartedMain][INFO ][GeneralLogger]JMS FEP Constant:
+  INSTANCE_NAME = fep
+  CONFIGURATION_PROPERTIES_PREFIX = spring.fep.jms
+  CONFIGURATION_PROPERTIES_PREFIX_PROP = spring.fep.jms.prop
+  CONFIGURATION_PROPERTIES_QUEUEMANAGER = spring.fep.jms.prop.queueManager
+  CONFIGURATION_PROPERTIES_CHANNEL = spring.fep.jms.prop.channel
+  CONFIGURATION_PROPERTIES_CONNNAME = spring.fep.jms.prop.connName
+  CONFIGURATION_PROPERTIES_USER = spring.fep.jms.prop.user
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.fep.jms.prop.password
+  BEAN_NAME_PROPERTIES = fepJmsConfigurationProperties
+  MQ_CONNECTION_FACTORY = fepMQConnectionFactory
+  QUEUE_LISTENER_FACTORY = fepQueueListenerFactory
+  TOPIC_LISTENER_FACTORY = fepTopicListenerFactory
+  USER_CREDENTIALS_CONNECTION_FACTORY = fepUserCredentialsConnectionFactory
+  CACHING_CONNECTION_FACTORY = fepCachingConnectionFactory
+  POOLED_CONNECTION_FACTORY = fepPooledJmsConnectionFactory
+  MESSAGE_CONVERTER = fepMessageConverter
+  SIMPLE_MESSAGE_CONVERTER = fepSimpleMessageConverter
+  SIMPLE_STRING_IN_MESSAGE_CONVERTER = fepSimpleStringInMessageConverter
+  JMS_TEMPLATE = fepJmsTemplate
+  SIMPLE_JMS_TEMPLATE = fepSimpleJmsTemplate
+  SIMPLE_STRING_IN_JMS_TEMPLATE = fepSimpleStringInJmsTemplate
+  JMS_TRANSACTION_MANAGER = fepJmsTransactionManager
+  QUEUE_NAME_ATMMON = #{@jmsMsgConfiguration.queueNames.atmMon}
+  QUEUE_NAME_DEAD = #{@jmsMsgConfiguration.queueNames.dead}
+  QUEUE_NAME_PYBATCH = #{@jmsMsgConfiguration.queueNames.pyBatch}
+  QUEUE_NAME_NB = #{@jmsMsgConfiguration.queueNames.nb}
+  QUEUE_NAME_MB = #{@jmsMsgConfiguration.queueNames.mb}
+  QUEUE_NAME_IVR = #{@jmsMsgConfiguration.queueNames.ivr}
+  QUEUE_NAME_HCE = #{@jmsMsgConfiguration.queueNames.hce}
+  QUEUE_NAME_EATM = #{@jmsMsgConfiguration.queueNames.eatm}
+  QUEUE_NAME_TEST = #{@jmsMsgConfiguration.queueNames.test}
+  TOPIC_NAME_TEST = #{@jmsMsgConfiguration.topicNames.test}
+
+[2023-05-03 16:03:51.933][restartedMain][INFO ][GeneralLogger]JMS FEP Configuration Properties:
+  spring.fep.jms.logger = Logger[com.ibm.mq.spring.boot.MQConfigurationProperties]
+  spring.fep.jms.PROPERTY_USE_IBM_CIPHER_MAPPINGS = com.ibm.mq.cfg.useIBMCipherMappings
+  spring.fep.jms.PROPERTY_OUTBOUND_SNI = com.ibm.mq.cfg.SSL.outboundSNI
+  spring.fep.jms.queueManager = QM1
+  spring.fep.jms.channel = DEV.ADMIN.SVRCONN
+  spring.fep.jms.connName = 10.3.101.3(1414)
+  spring.fep.jms.clientId = null
+  spring.fep.jms.applicationName = null
+  spring.fep.jms.user = admin
+  spring.fep.jms.password = ********
+  spring.fep.jms.userAuthenticationMQCSP = false
+  spring.fep.jms.useAuthenticationMQCSP = false
+  spring.fep.jms.authCSP = true
+  spring.fep.jms.sslCipherSuite = null
+  spring.fep.jms.sslCipherSpec = null
+  spring.fep.jms.sslPeerName = null
+  spring.fep.jms.useIBMCipherMappings = true
+  spring.fep.jms.outboundSNI = 
+  spring.fep.jms.defaultReconnect = 
+  spring.fep.jms.ccdtUrl = null
+  spring.fep.jms.tempQPrefix = null
+  spring.fep.jms.tempTopicPrefix = null
+  spring.fep.jms.tempModel = null
+  spring.fep.jms.sslFIPSRequired = false
+  spring.fep.jms.sslKeyResetCount = -1
+  spring.fep.jms.additionalProperties = {}
+  spring.fep.jms.cache.enabled = true
+  spring.fep.jms.cache.consumers = false
+  spring.fep.jms.cache.producers = true
+  spring.fep.jms.cache.sessionCacheSize = 1
+  spring.fep.jms.cache.reconnectOnException = true
+
+[2023-05-03 16:03:51.934][restartedMain][INFO ][GeneralLogger]JMS Msg Configuration:
+  spring.fep.jms.queueNames.test = TestQueue
+  spring.fep.jms.queueNames.dead = null
+  spring.fep.jms.queueNames.deadFisc = null
+  spring.fep.jms.queueNames.batch = BatchQueue
+  spring.fep.jms.queueNames.atmMon = null
+  spring.fep.jms.queueNames.ems = FEP.EMS.QL
+  spring.fep.jms.queueNames.pyBatch = PYBatchQueue
+  spring.fep.jms.queueNames.pyBatchAck = PYBatchAckQueue
+  spring.fep.jms.queueNames.nb = NBQueue
+  spring.fep.jms.queueNames.nbAck = NBAckQueue
+  spring.fep.jms.queueNames.mb = MBQueue
+  spring.fep.jms.queueNames.mbAck = MBAckQueue
+  spring.fep.jms.queueNames.ivr = IVRQueue
+  spring.fep.jms.queueNames.ivrAck = IVRAckQueue
+  spring.fep.jms.queueNames.eatm = EATMQueue
+  spring.fep.jms.queueNames.eatmAck = EATMAckQueue
+  spring.fep.jms.queueNames.hce = HCEQueue
+  spring.fep.jms.queueNames.hceAck = HCEAckQueue
+  spring.fep.jms.topicNames.test = TestTopic
+
+[2023-05-03 16:03:51.977][restartedMain][TRACE][TraceLogger]Creating FEP caching IBM MQ ConnectionFactory
+[2023-05-03 16:03:53.042][restartedMain][INFO ][SyscomGeneralLogger]Data Source SAFEAADB Constant:
+  DS_NAME = safeaadb
+  CONFIGURATION_PROPERTIES_PREFIX = spring.datasource.safeaadb
+  CONFIGURATION_PROPERTIES_USERNAME = spring.datasource.safeaadb.username
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.datasource.safeaadb.password
+  CONFIGURATION_PROPERTIES_DRIVER_CLASS_NAME = spring.datasource.safeaadb.driver-class-name
+  CONFIGURATION_PROPERTIES_JDBC_URL = spring.datasource.safeaadb.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_MASTER = spring.datasource.safeaadb.master
+  CONFIGURATION_PROPERTIES_MASTER_USERNAME = spring.datasource.safeaadb.master.username
+  CONFIGURATION_PROPERTIES_MASTER_PASSWORD = spring.datasource.safeaadb.master.password
+  CONFIGURATION_PROPERTIES_MASTER_DRIVER_CLASS_NAME = spring.datasource.safeaadb.master.driver-class-name
+  CONFIGURATION_PROPERTIES_MASTER_JDBC_URL = spring.datasource.safeaadb.master.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_SLAVE = spring.datasource.safeaadb.slave
+  CONFIGURATION_PROPERTIES_SLAVE_USERNAME = spring.datasource.safeaadb.slave.username
+  CONFIGURATION_PROPERTIES_SLAVE_PASSWORD = spring.datasource.safeaadb.slave.password
+  CONFIGURATION_PROPERTIES_SLAVE_DRIVER_CLASS_NAME = spring.datasource.safeaadb.slave.driver-class-name
+  CONFIGURATION_PROPERTIES_SLAVE_JDBC_URL = spring.datasource.safeaadb.slave.jdbc-url
+  CONFIGURATION_PROPERTIES_JNDI_NAME = spring.datasource.safeaadb.jndi-name
+  CONFIGURATION_PROPERTIES_MASTER_JNDI_NAME = spring.datasource.safeaadb.master.jndi-name
+  CONFIGURATION_PROPERTIES_SLAVE_JNDI_NAME = spring.datasource.safeaadb.slave.jndi-name
+  CONFIGURATION_PROPERTIES_DATASOURCENAME = spring.datasource.safeaadb.data-source-name
+  BEAN_NAME_DATASOURCE = safeaadbDataSource
+  BEAN_NAME_DATASOURCE_MASTER = safeaadbDataSourceMaster
+  BEAN_NAME_DATASOURCE_SLAVE = safeaadbDataSourceSlave
+  BEAN_NAME_DATASOURCE_DYNAMIC = safeaadbDataSourceDynamic
+  BEAN_NAME_DATASOURCE_PROPERTIES = safeaadbDataSourceProperties
+  BEAN_NAME_SQL_SESSION_FACTORY = safeaadbSqlSessionFactory
+  BEAN_NAME_SQL_SESSION_TEMPLATE = safeaadbSqlSessionTemplate
+  BEAN_NAME_TRANSACTION_MANAGER = safeaadbTransactionManager
+  BEAN_NAME_TRANSACTION_TEMPLATE = safeaadbTransactionTemplate
+
+[2023-05-03 16:03:53.043][restartedMain][INFO ][SyscomGeneralLogger]Data Source SAFEAADB Configruation:
+  environment = ApplicationServletEnvironment {activeProfiles=[mybatis, integration, scheduler, jms, safeaa, web, devtools], defaultProfiles=[default], propertySources=[ConfigurationPropertySourcesPropertySource {name='configurationProperties'}, EncryptableMapPropertySourceWrapper {name='com.ibm.mq.spring.boot.MQConfigurationListenerDefault'}, EncryptableEnumerablePropertySourceWrapper {name='commandLineArgs'}, StubPropertySource {name='servletConfigInitParams'}, ServletContextPropertySource {name='servletContextInitParams'}, EncryptableMapPropertySourceWrapper {name='systemProperties'}, EncryptableSystemEnvironmentPropertySourceWrapper {name='systemEnvironment'}, EncryptablePropertySourceWrapper {name='random'}, EncryptablePropertySourceWrapper {name='cachedrandom'}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application-web.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application-safeaa.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application-jms.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application-scheduler.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application-integration.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application-mybatis.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''}, EncryptableMapPropertySourceWrapper {name='devtools'}]}
+  spring.safeaa.mybatis.interceptor.audittrail.enable = true
+  spring.safeaa.mybatis.interceptor.audittrail.ignore-tablename-prefix-list = [SYSCOMAUDITTRAIL]
+
+[2023-05-03 16:03:53.267][restartedMain][INFO ][SyscomTraceLogger][SafeaaAuditTrailInterceptor]start to intercept...
+[2023-05-03 16:03:55.681][restartedMain][INFO ][GeneralLogger]Web Configuration:
+  spring.fep.web.demo = true
+  spring.fep.web.ldap = false
+  spring.fep.web.ldap.simulator = false
+  spring.fep.web.title = 合作金庫商業銀行
+  spring.fep.web.web-type = FEP
+  spring.fep.web.query-only = 0
+  spring.fep.web.time-out = 30000
+  spring.fep.web.subsys = 1,2,3,4,5,6,7,8,9,10,11,12,13,14
+  spring.fep.web.isFEPWebOrRMWeb = FEPWeb
+  spring.fep.web.RemoteMQServiceFlag = ON
+  spring.fep.web.RemoteMQServiceIP = serverIP
+  spring.fep.web.mq.service.port = 8161
+  spring.fep.web.csvSavedPath = /home/syscom/FEP10/csv/
+  spring.fep.web.mq.service.request = /api/CustomCommand
+  spring.fep.web.system.principal = HWAFANG@tcbt.com
+  spring.fep.web.system.webaddress = ldaps://10.0.6.2:636
+  spring.fep.web.system.strtemp = dc=tcbt,dc=com
+  spring.fep.web.system.username = HWAFANG
+  spring.fep.web.system.userinname = HWAFANG
+  spring.fep.web.system.chkid = G201450209
+  spring.fep.web.system.userid = HWAFANG
+  spring.fep.web.system.fileName = fepd.cer
+  spring.fep.web.system.filesscode = changeit
+  spring.fep.web.system.certificateName = X.509
+  spring.fep.web.system.fiddler = fiddler
+  authenticationInterceptor = com.syscom.fep.web.interceptor.AuthenticationInterceptor@1aff217e
+  viewInterceptor = com.syscom.fep.web.interceptor.ViewInterceptor@2ab03026
+
+[2023-05-03 16:03:55.816][restartedMain][INFO ][GeneralLogger]Data Source FEPDB Constant:
+  DS_NAME = fepdb
+  CONFIGURATION_PROPERTIES_PREFIX = spring.datasource.fepdb
+  CONFIGURATION_PROPERTIES_USERNAME = spring.datasource.fepdb.username
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.datasource.fepdb.password
+  CONFIGURATION_PROPERTIES_DRIVER_CLASS_NAME = spring.datasource.fepdb.driver-class-name
+  CONFIGURATION_PROPERTIES_JDBC_URL = spring.datasource.fepdb.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_MASTER = spring.datasource.fepdb.master
+  CONFIGURATION_PROPERTIES_MASTER_USERNAME = spring.datasource.fepdb.master.username
+  CONFIGURATION_PROPERTIES_MASTER_PASSWORD = spring.datasource.fepdb.master.password
+  CONFIGURATION_PROPERTIES_MASTER_DRIVER_CLASS_NAME = spring.datasource.fepdb.master.driver-class-name
+  CONFIGURATION_PROPERTIES_MASTER_JDBC_URL = spring.datasource.fepdb.master.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_SLAVE = spring.datasource.fepdb.slave
+  CONFIGURATION_PROPERTIES_SLAVE_USERNAME = spring.datasource.fepdb.slave.username
+  CONFIGURATION_PROPERTIES_SLAVE_PASSWORD = spring.datasource.fepdb.slave.password
+  CONFIGURATION_PROPERTIES_SLAVE_DRIVER_CLASS_NAME = spring.datasource.fepdb.slave.driver-class-name
+  CONFIGURATION_PROPERTIES_SLAVE_JDBC_URL = spring.datasource.fepdb.slave.jdbc-url
+  CONFIGURATION_PROPERTIES_JNDI_NAME = spring.datasource.fepdb.jndi-name
+  CONFIGURATION_PROPERTIES_MASTER_JNDI_NAME = spring.datasource.fepdb.master.jndi-name
+  CONFIGURATION_PROPERTIES_SLAVE_JNDI_NAME = spring.datasource.fepdb.slave.jndi-name
+  BEAN_NAME_DATASOURCE = fepdbDataSource
+  BEAN_NAME_DATASOURCE_MASTER = fepdbDataSourceMaster
+  BEAN_NAME_DATASOURCE_SLAVE = fepdbDataSourceSlave
+  BEAN_NAME_DATASOURCE_DYNAMIC = fepdbDataSourceDynamic
+  BEAN_NAME_DATASOURCE_PROPERTIES = fepdbDataSourceProperties
+  BEAN_NAME_SQL_SESSION_FACTORY = fepdbSqlSessionFactory
+  BEAN_NAME_SQL_SESSION_TEMPLATE = fepdbSqlSessionTemplate
+  BEAN_NAME_TRANSACTION_MANAGER = fepdbTransactionManager
+  BEAN_NAME_TRANSACTION_TEMPLATE = fepdbTransactionTemplate
+
+[2023-05-03 16:03:55.849][restartedMain][INFO ][GeneralLogger]PKI Configuration:
+  path = /PKI
+  fileAcdu = acdu
+  fileAcdp = acdp
+  dbInstanceName1 = fatinst1
+  dbInstanceName1Db = FEPDB,DESDB
+  dbInstanceName2 = fbdinst1
+  dbInstanceName2Db = EMSDB,DESLOGDB,FEPHIS
+  dbNameToPkiAcctFileMap = {FEPDB=\PKI\fatinst1\acdu, FEPHIS=\PKI\fbdinst1\acdu, DESDB=\PKI\fatinst1\acdu, DESLOGDB=\PKI\fbdinst1\acdu, EMSDB=\PKI\fbdinst1\acdu}
+  dbNameToPkiSscodeFileMap = {FEPDB=\PKI\fatinst1\acdp, FEPHIS=\PKI\fbdinst1\acdp, DESDB=\PKI\fatinst1\acdp, DESLOGDB=\PKI\fbdinst1\acdp, EMSDB=\PKI\fbdinst1\acdp}
+
+[2023-05-03 16:03:55.850][restartedMain][INFO ][GeneralLogger]Data Source FEPDB Configuration:
+  spring.fep.mybatis.interceptor.audittrail.enable = true
+  spring.fep.mybatis.interceptor.audittrail.ignore-tablename-prefix-list = [SYSCOMAUDITTRAIL]
+  spring.datasource.fepdb.jndi-name = 
+  pkiConfig = com.syscom.fep.base.configurer.PKIConfig$$EnhancerBySpringCGLIB$$ab41ece2@5b7da76d
+
+[2023-05-03 16:03:56.012][restartedMain][INFO ][GeneralLogger][AuditTrailInterceptor]start to intercept...
+[2023-05-03 16:04:11.539][restartedMain][INFO ][GeneralLogger]JMS EMS Constant:
+  INSTANCE_NAME = ems
+  CONFIGURATION_PROPERTIES_PREFIX = spring.fep.jms.ems
+  CONFIGURATION_PROPERTIES_PREFIX_PROP = spring.fep.jms.ems.prop
+  CONFIGURATION_PROPERTIES_QUEUEMANAGER = spring.fep.jms.ems.prop.queueManager
+  CONFIGURATION_PROPERTIES_CHANNEL = spring.fep.jms.ems.prop.channel
+  CONFIGURATION_PROPERTIES_CONNNAME = spring.fep.jms.ems.prop.connName
+  CONFIGURATION_PROPERTIES_USER = spring.fep.jms.ems.prop.user
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.fep.jms.ems.prop.password
+  BEAN_NAME_PROPERTIES = emsJmsConfigurationProperties
+  MQ_CONNECTION_FACTORY = emsMQConnectionFactory
+  QUEUE_LISTENER_FACTORY = emsQueueListenerFactory
+  TOPIC_LISTENER_FACTORY = emsTopicListenerFactory
+  USER_CREDENTIALS_CONNECTION_FACTORY = emsUserCredentialsConnectionFactory
+  CACHING_CONNECTION_FACTORY = emsCachingConnectionFactory
+  MESSAGE_CONVERTER = emsMessageConverter
+  JMS_TEMPLATE = emsJmsTemplate
+  JMS_TRANSACTION_MANAGER = emsJmsTransactionManager
+  QUEUE_INSTANCE_NAME = #{@jmsMsgConfiguration.queueNames.ems}
+
+[2023-05-03 16:04:11.539][restartedMain][INFO ][GeneralLogger]JMS EMS Configuration Properties:
+  spring.fep.jms.ems.logger = Logger[com.ibm.mq.spring.boot.MQConfigurationProperties]
+  spring.fep.jms.ems.PROPERTY_USE_IBM_CIPHER_MAPPINGS = com.ibm.mq.cfg.useIBMCipherMappings
+  spring.fep.jms.ems.PROPERTY_OUTBOUND_SNI = com.ibm.mq.cfg.SSL.outboundSNI
+  spring.fep.jms.ems.queueManager = QM1
+  spring.fep.jms.ems.channel = DEV.ADMIN.SVRCONN
+  spring.fep.jms.ems.connName = 10.3.101.3(1414)
+  spring.fep.jms.ems.clientId = null
+  spring.fep.jms.ems.applicationName = null
+  spring.fep.jms.ems.user = admin
+  spring.fep.jms.ems.password = ********
+  spring.fep.jms.ems.userAuthenticationMQCSP = false
+  spring.fep.jms.ems.useAuthenticationMQCSP = false
+  spring.fep.jms.ems.authCSP = true
+  spring.fep.jms.ems.sslCipherSuite = null
+  spring.fep.jms.ems.sslCipherSpec = null
+  spring.fep.jms.ems.sslPeerName = null
+  spring.fep.jms.ems.useIBMCipherMappings = true
+  spring.fep.jms.ems.outboundSNI = 
+  spring.fep.jms.ems.defaultReconnect = 
+  spring.fep.jms.ems.ccdtUrl = null
+  spring.fep.jms.ems.tempQPrefix = null
+  spring.fep.jms.ems.tempTopicPrefix = null
+  spring.fep.jms.ems.tempModel = null
+  spring.fep.jms.ems.sslFIPSRequired = false
+  spring.fep.jms.ems.sslKeyResetCount = -1
+  spring.fep.jms.ems.additionalProperties = {}
+  spring.fep.jms.ems.cache.enabled = true
+  spring.fep.jms.ems.cache.consumers = false
+  spring.fep.jms.ems.cache.producers = true
+  spring.fep.jms.ems.cache.sessionCacheSize = 1
+  spring.fep.jms.ems.cache.reconnectOnException = true
+
+[2023-05-03 16:04:11.540][restartedMain][TRACE][TraceLogger]Creating EMS caching IBM MQ ConnectionFactory
+[2023-05-03 16:04:13.376][restartedMain][INFO ][GeneralLogger]Data Source EMSDB Constant:
+  DS_NAME = emsdb
+  CONFIGURATION_PROPERTIES_PREFIX = spring.datasource.emsdb
+  CONFIGURATION_PROPERTIES_USERNAME = spring.datasource.emsdb.username
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.datasource.emsdb.password
+  CONFIGURATION_PROPERTIES_DRIVER_CLASS_NAME = spring.datasource.emsdb.driver-class-name
+  CONFIGURATION_PROPERTIES_JDBC_URL = spring.datasource.emsdb.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_MASTER = spring.datasource.emsdb.master
+  CONFIGURATION_PROPERTIES_MASTER_USERNAME = spring.datasource.emsdb.master.username
+  CONFIGURATION_PROPERTIES_MASTER_PASSWORD = spring.datasource.emsdb.master.password
+  CONFIGURATION_PROPERTIES_MASTER_DRIVER_CLASS_NAME = spring.datasource.emsdb.master.driver-class-name
+  CONFIGURATION_PROPERTIES_MASTER_JDBC_URL = spring.datasource.emsdb.master.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_SLAVE = spring.datasource.emsdb.slave
+  CONFIGURATION_PROPERTIES_SLAVE_USERNAME = spring.datasource.emsdb.slave.username
+  CONFIGURATION_PROPERTIES_SLAVE_PASSWORD = spring.datasource.emsdb.slave.password
+  CONFIGURATION_PROPERTIES_SLAVE_DRIVER_CLASS_NAME = spring.datasource.emsdb.slave.driver-class-name
+  CONFIGURATION_PROPERTIES_SLAVE_JDBC_URL = spring.datasource.emsdb.slave.jdbc-url
+  CONFIGURATION_PROPERTIES_JNDI_NAME = spring.datasource.emsdb.jndi-name
+  CONFIGURATION_PROPERTIES_MASTER_JNDI_NAME = spring.datasource.emsdb.master.jndi-name
+  CONFIGURATION_PROPERTIES_SLAVE_JNDI_NAME = spring.datasource.emsdb.slave.jndi-name
+  BEAN_NAME_DATASOURCE = emsdbDataSource
+  BEAN_NAME_DATASOURCE_MASTER = emsdbDataSourceMaster
+  BEAN_NAME_DATASOURCE_SLAVE = emsdbDataSourceSlave
+  BEAN_NAME_DATASOURCE_DYNAMIC = emsdbDataSourceDynamic
+  BEAN_NAME_DATASOURCE_PROPERTIES = emsdbDataSourceProperties
+  BEAN_NAME_SQL_SESSION_FACTORY = emsdbSqlSessionFactory
+  BEAN_NAME_SQL_SESSION_TEMPLATE = emsdbSqlSessionTemplate
+  BEAN_NAME_TRANSACTION_MANAGER = emsdbTransactionManager
+  BEAN_NAME_TRANSACTION_TEMPLATE = emsdbTransactionTemplate
+
+[2023-05-03 16:04:13.376][restartedMain][INFO ][GeneralLogger]Data Source EMSDB Configuration:
+  spring.datasource.emsdb.jndi-name = 
+  pkiConfig = com.syscom.fep.base.configurer.PKIConfig$$EnhancerBySpringCGLIB$$ab41ece2@5b7da76d
+
+[2023-05-03 16:04:13.870][restartedMain][INFO ][GeneralLogger]System Monitor Configuration:
+  spring.fep.web.system.monitor.prometheus.name = null
+  spring.fep.web.system.monitor.prometheus.host = 127.0.0.1
+  spring.fep.web.system.monitor.prometheus.port = 9090
+  spring.fep.web.system.monitor.host.name = null
+  spring.fep.web.system.monitor.host.host = 127.0.0.1
+  spring.fep.web.system.monitor.host.port = 8081
+
+[2023-05-03 16:04:15.324][restartedMain][INFO ][com.syscom.fep.frmcommon.util.SpringBeanFactoryUtil]register bean succeed, beanClassName = [com.syscom.fep.scheduler.job.impl.ReloadDbCacheJobConfig], scope = [Singleton], constructorArgumentValues = []
+[2023-05-03 16:04:15.387][restartedMain][INFO ][com.syscom.fep.frmcommon.util.SpringBeanFactoryUtil]register bean succeed, beanClassName = [com.syscom.fep.scheduler.job.impl.ReloadDbCacheJob], scope = [Singleton], constructorArgumentValues = []
+[2023-05-03 16:04:15.439][restartedMain][INFO ][com.syscom.fep.frmcommon.util.SpringBeanFactoryUtil]register bean succeed, beanClassName = [com.syscom.fep.scheduler.job.impl.AppMonitorJobConfig], scope = [Singleton], constructorArgumentValues = []
+[2023-05-03 16:04:15.487][restartedMain][INFO ][com.syscom.fep.frmcommon.util.SpringBeanFactoryUtil]register bean succeed, beanClassName = [com.syscom.fep.scheduler.job.impl.AppMonitorJob], scope = [Singleton], constructorArgumentValues = []
+[2023-05-03 16:04:15.506][restartedMain][INFO ][SchedulerLogger]ReloadDbCacheJob start to schedule...
+[2023-05-03 16:04:15.526][restartedMain][INFO ][SchedulerLogger]ReloadDbCacheJob has been scheduled by CronExpression = [0 0/30 * * * ? ]
+[2023-05-03 16:04:15.527][restartedMain][INFO ][SchedulerLogger]AppMonitorJob start to schedule...
+[2023-05-03 16:04:15.528][restartedMain][INFO ][SchedulerLogger]AppMonitorJob has been scheduled by CronExpression = [0 0/1 * * * ?]
+[2023-05-03 16:04:15.655][restartedMain][INFO ][GeneralLogger]JMS BATCH Constant:
+  INSTANCE_NAME = batch
+  CONFIGURATION_PROPERTIES_PREFIX = spring.fep.jms.batch
+  CONFIGURATION_PROPERTIES_PREFIX_PROP = spring.fep.jms.batch.prop
+  CONFIGURATION_PROPERTIES_QUEUEMANAGER = spring.fep.jms.batch.prop.queueManager
+  CONFIGURATION_PROPERTIES_CHANNEL = spring.fep.jms.batch.prop.channel
+  CONFIGURATION_PROPERTIES_CONNNAME = spring.fep.jms.batch.prop.connName
+  CONFIGURATION_PROPERTIES_USER = spring.fep.jms.batch.prop.user
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.fep.jms.batch.prop.password
+  BEAN_NAME_PROPERTIES = batchJmsConfigurationProperties
+  MQ_CONNECTION_FACTORY = batchMQConnectionFactory
+  QUEUE_LISTENER_FACTORY = batchQueueListenerFactory
+  TOPIC_LISTENER_FACTORY = batchTopicListenerFactory
+  USER_CREDENTIALS_CONNECTION_FACTORY = batchUserCredentialsConnectionFactory
+  CACHING_CONNECTION_FACTORY = batchCachingConnectionFactory
+  MESSAGE_CONVERTER = batchMessageConverter
+  JMS_TEMPLATE = batchJmsTemplate
+  JMS_TRANSACTION_MANAGER = batchJmsTransactionManager
+  QUEUE_INSTANCE_NAME = #{@jmsMsgConfiguration.queueNames.batch}
+
+[2023-05-03 16:04:15.656][restartedMain][INFO ][GeneralLogger]JMS BATCH Configuration Properties:
+  spring.fep.jms.batch.logger = Logger[com.ibm.mq.spring.boot.MQConfigurationProperties]
+  spring.fep.jms.batch.PROPERTY_USE_IBM_CIPHER_MAPPINGS = com.ibm.mq.cfg.useIBMCipherMappings
+  spring.fep.jms.batch.PROPERTY_OUTBOUND_SNI = com.ibm.mq.cfg.SSL.outboundSNI
+  spring.fep.jms.batch.queueManager = QM1
+  spring.fep.jms.batch.channel = DEV.ADMIN.SVRCONN
+  spring.fep.jms.batch.connName = 10.3.101.3(1414)
+  spring.fep.jms.batch.clientId = null
+  spring.fep.jms.batch.applicationName = null
+  spring.fep.jms.batch.user = admin
+  spring.fep.jms.batch.password = ********
+  spring.fep.jms.batch.userAuthenticationMQCSP = false
+  spring.fep.jms.batch.useAuthenticationMQCSP = false
+  spring.fep.jms.batch.authCSP = true
+  spring.fep.jms.batch.sslCipherSuite = null
+  spring.fep.jms.batch.sslCipherSpec = null
+  spring.fep.jms.batch.sslPeerName = null
+  spring.fep.jms.batch.useIBMCipherMappings = true
+  spring.fep.jms.batch.outboundSNI = 
+  spring.fep.jms.batch.defaultReconnect = 
+  spring.fep.jms.batch.ccdtUrl = null
+  spring.fep.jms.batch.tempQPrefix = null
+  spring.fep.jms.batch.tempTopicPrefix = null
+  spring.fep.jms.batch.tempModel = null
+  spring.fep.jms.batch.sslFIPSRequired = false
+  spring.fep.jms.batch.sslKeyResetCount = -1
+  spring.fep.jms.batch.additionalProperties = {}
+  spring.fep.jms.batch.cache.enabled = true
+  spring.fep.jms.batch.cache.consumers = false
+  spring.fep.jms.batch.cache.producers = true
+  spring.fep.jms.batch.cache.sessionCacheSize = 1
+  spring.fep.jms.batch.cache.reconnectOnException = true
+
+[2023-05-03 16:04:15.656][restartedMain][TRACE][TraceLogger]Creating BATCH caching IBM MQ ConnectionFactory
+[2023-05-03 16:04:16.862][restartedMain][INFO ][GeneralLogger]Data Source DESDB Constant:
+  DS_NAME = desdb
+  CONFIGURATION_PROPERTIES_PREFIX = spring.datasource.desdb
+  CONFIGURATION_PROPERTIES_USERNAME = spring.datasource.desdb.username
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.datasource.desdb.password
+  CONFIGURATION_PROPERTIES_DRIVER_CLASS_NAME = spring.datasource.desdb.driver-class-name
+  CONFIGURATION_PROPERTIES_JDBC_URL = spring.datasource.desdb.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_MASTER = spring.datasource.desdb.master
+  CONFIGURATION_PROPERTIES_MASTER_USERNAME = spring.datasource.desdb.master.username
+  CONFIGURATION_PROPERTIES_MASTER_PASSWORD = spring.datasource.desdb.master.password
+  CONFIGURATION_PROPERTIES_MASTER_DRIVER_CLASS_NAME = spring.datasource.desdb.master.driver-class-name
+  CONFIGURATION_PROPERTIES_MASTER_JDBC_URL = spring.datasource.desdb.master.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_SLAVE = spring.datasource.desdb.slave
+  CONFIGURATION_PROPERTIES_SLAVE_USERNAME = spring.datasource.desdb.slave.username
+  CONFIGURATION_PROPERTIES_SLAVE_PASSWORD = spring.datasource.desdb.slave.password
+  CONFIGURATION_PROPERTIES_SLAVE_DRIVER_CLASS_NAME = spring.datasource.desdb.slave.driver-class-name
+  CONFIGURATION_PROPERTIES_SLAVE_JDBC_URL = spring.datasource.desdb.slave.jdbc-url
+  CONFIGURATION_PROPERTIES_JNDI_NAME = spring.datasource.desdb.jndi-name
+  CONFIGURATION_PROPERTIES_MASTER_JNDI_NAME = spring.datasource.desdb.master.jndi-name
+  CONFIGURATION_PROPERTIES_SLAVE_JNDI_NAME = spring.datasource.desdb.slave.jndi-name
+  BEAN_NAME_DATASOURCE = desdbDataSource
+  BEAN_NAME_DATASOURCE_MASTER = desdbDataSourceMaster
+  BEAN_NAME_DATASOURCE_SLAVE = desdbDataSourceSlave
+  BEAN_NAME_DATASOURCE_DYNAMIC = desdbDataSourceDynamic
+  BEAN_NAME_DATASOURCE_PROPERTIES = desdbDataSourceProperties
+  BEAN_NAME_SQL_SESSION_FACTORY = desdbSqlSessionFactory
+  BEAN_NAME_SQL_SESSION_TEMPLATE = desdbSqlSessionTemplate
+  BEAN_NAME_TRANSACTION_MANAGER = desdbTransactionManager
+  BEAN_NAME_TRANSACTION_TEMPLATE = desdbTransactionTemplate
+
+[2023-05-03 16:04:16.862][restartedMain][INFO ][GeneralLogger]Data Source DESDB Configuration:
+  spring.datasource.desdb.jndi-name = 
+  pkiConfig = com.syscom.fep.base.configurer.PKIConfig$$EnhancerBySpringCGLIB$$ab41ece2@5b7da76d
+
+[2023-05-03 16:04:16.892][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fatinst1/acdu]...
+[2023-05-03 16:04:16.896][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fatinst1/acdu] successful
+[2023-05-03 16:04:16.896][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fatinst1/acdp]...
+[2023-05-03 16:04:16.900][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fatinst1/acdp] successful
+[2023-05-03 16:04:16.934][restartedMain][INFO ][GeneralLogger]Data Source DESLOGDB Constant:
+  DS_NAME = deslogdb
+  CONFIGURATION_PROPERTIES_PREFIX = spring.datasource.deslogdb
+  CONFIGURATION_PROPERTIES_USERNAME = spring.datasource.deslogdb.username
+  CONFIGURATION_PROPERTIES_PASSWORD = spring.datasource.deslogdb.password
+  CONFIGURATION_PROPERTIES_DRIVER_CLASS_NAME = spring.datasource.deslogdb.driver-class-name
+  CONFIGURATION_PROPERTIES_JDBC_URL = spring.datasource.deslogdb.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_MASTER = spring.datasource.deslogdb.master
+  CONFIGURATION_PROPERTIES_MASTER_USERNAME = spring.datasource.deslogdb.master.username
+  CONFIGURATION_PROPERTIES_MASTER_PASSWORD = spring.datasource.deslogdb.master.password
+  CONFIGURATION_PROPERTIES_MASTER_DRIVER_CLASS_NAME = spring.datasource.deslogdb.master.driver-class-name
+  CONFIGURATION_PROPERTIES_MASTER_JDBC_URL = spring.datasource.deslogdb.master.jdbc-url
+  CONFIGURATION_PROPERTIES_PREFIX_SLAVE = spring.datasource.deslogdb.slave
+  CONFIGURATION_PROPERTIES_SLAVE_USERNAME = spring.datasource.deslogdb.slave.username
+  CONFIGURATION_PROPERTIES_SLAVE_PASSWORD = spring.datasource.deslogdb.slave.password
+  CONFIGURATION_PROPERTIES_SLAVE_DRIVER_CLASS_NAME = spring.datasource.deslogdb.slave.driver-class-name
+  CONFIGURATION_PROPERTIES_SLAVE_JDBC_URL = spring.datasource.deslogdb.slave.jdbc-url
+  CONFIGURATION_PROPERTIES_JNDI_NAME = spring.datasource.deslogdb.jndi-name
+  CONFIGURATION_PROPERTIES_MASTER_JNDI_NAME = spring.datasource.deslogdb.master.jndi-name
+  CONFIGURATION_PROPERTIES_SLAVE_JNDI_NAME = spring.datasource.deslogdb.slave.jndi-name
+  BEAN_NAME_DATASOURCE = deslogdbDataSource
+  BEAN_NAME_DATASOURCE_MASTER = deslogdbDataSourceMaster
+  BEAN_NAME_DATASOURCE_SLAVE = deslogdbDataSourceSlave
+  BEAN_NAME_DATASOURCE_DYNAMIC = deslogdbDataSourceDynamic
+  BEAN_NAME_DATASOURCE_PROPERTIES = deslogdbDataSourceProperties
+  BEAN_NAME_SQL_SESSION_FACTORY = deslogdbSqlSessionFactory
+  BEAN_NAME_SQL_SESSION_TEMPLATE = deslogdbSqlSessionTemplate
+  BEAN_NAME_TRANSACTION_MANAGER = deslogdbTransactionManager
+  BEAN_NAME_TRANSACTION_TEMPLATE = deslogdbTransactionTemplate
+
+[2023-05-03 16:04:16.934][restartedMain][INFO ][GeneralLogger]Data Source DESLOGDB Configuration:
+  spring.datasource.deslogdb.jndi-name = 
+  pkiConfig = com.syscom.fep.base.configurer.PKIConfig$$EnhancerBySpringCGLIB$$ab41ece2@5b7da76d
+
+[2023-05-03 16:04:19.586][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fatinst1/acdu]...
+[2023-05-03 16:04:19.587][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fatinst1/acdu] successful
+[2023-05-03 16:04:19.588][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fatinst1/acdp]...
+[2023-05-03 16:04:19.589][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fatinst1/acdp] successful
+[2023-05-03 16:04:19.628][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-1 - Starting...
+[2023-05-03 16:04:20.527][restartedMain][INFO ][com.zaxxer.hikari.pool.PoolBase]HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-05-03 16:04:20.574][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-1 - Start completed.
+[2023-05-03 16:04:20.632][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fatinst1/acdu]...
+[2023-05-03 16:04:20.633][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fatinst1/acdu] successful
+[2023-05-03 16:04:20.634][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fatinst1/acdp]...
+[2023-05-03 16:04:20.635][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fatinst1/acdp] successful
+[2023-05-03 16:04:20.642][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-2 - Starting...
+[2023-05-03 16:04:20.814][restartedMain][INFO ][com.zaxxer.hikari.pool.PoolBase]HikariPool-2 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-05-03 16:04:20.835][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-2 - Start completed.
+[2023-05-03 16:04:20.837][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fbdinst1/acdu]...
+[2023-05-03 16:04:20.842][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fbdinst1/acdu] successful
+[2023-05-03 16:04:20.842][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fbdinst1/acdp]...
+[2023-05-03 16:04:20.847][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fbdinst1/acdp] successful
+[2023-05-03 16:04:20.853][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-3 - Starting...
+[2023-05-03 16:04:21.006][restartedMain][INFO ][com.zaxxer.hikari.pool.PoolBase]HikariPool-3 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-05-03 16:04:21.054][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-3 - Start completed.
+[2023-05-03 16:04:21.056][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fbdinst1/acdu]...
+[2023-05-03 16:04:21.057][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fbdinst1/acdu] successful
+[2023-05-03 16:04:21.058][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]try to load in classpath = [PKI/fbdinst1/acdp]...
+[2023-05-03 16:04:21.059][restartedMain][INFO ][com.syscom.fep.frmcommon.util.IOUtil]load in classpath = [PKI/fbdinst1/acdp] successful
+[2023-05-03 16:04:21.063][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-4 - Starting...
+[2023-05-03 16:04:21.318][restartedMain][INFO ][com.zaxxer.hikari.pool.PoolBase]HikariPool-4 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-05-03 16:04:21.372][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-4 - Start completed.
+[2023-05-03 16:04:21.380][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-5 - Starting...
+[2023-05-03 16:04:21.529][restartedMain][INFO ][com.zaxxer.hikari.pool.PoolBase]HikariPool-5 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-05-03 16:04:21.637][restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-5 - Start completed.
+[2023-05-03 16:04:25.880][restartedMain][INFO ][GeneralLogger]Batch Job Base Configuration:
+  spring.fep.batch.task.path = /home/syscom/fep-app/fep-batch-task
+  spring.fep.batch.task.jarNameTemplate = fep-batch-task-{0}-1.0.0.jar
+
+[2023-05-03 16:04:25.900][restartedMain][INFO ][GeneralLogger]SuipClient Configuration:
+  applicationContext = org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@695d889c, started on Wed May 03 16:03:42 CST 2023
+  spring.fep.suipclient.enable = false
+  spring.fep.suipclient.atmagent.enable = false
+
+[2023-05-03 16:04:25.919][restartedMain][INFO ][GeneralLogger]FEP Configuration:
+  spring.fep.systemid = FEP10
+  spring.fep.hostip = 127.0.0.1
+  spring.fep.hostname = centos8.host
+  spring.fep.t24.method.comparetota.enable = false
+  spring.fep.server.url.atm = http://127.0.0.1:8080/recv/atm
+  spring.fep.server.url.fisc = http://127.0.0.1:8080/recv/fisc
+  spring.fep.service.url.inqueue11x1 = http://localhost:8201/inqueue/11X1
+  spring.fep.restful.timeout = 30000
+  spring.fep.batch.url.listScheduler = http://127.0.0.1:8084/listScheduler
+  spring.fep.batch.url.operateScheduler = http://127.0.0.1:8084/operateScheduler
+  spring.fep.server.protocol.atm = restful
+  spring.fep.server.protocol.fisc = restful
+  spring.fep.apHostNames = [fepap1, fepap2]
+
+[2023-05-03 16:04:25.934][restartedMain][INFO ][GeneralLogger]Mail Configuration:
+  spring.fep.MailSmtp.smtp = smtp.qq.com
+  spring.fep.MailSmtp.port = 25
+  spring.fep.MailSmtp.account = fep2022
+  spring.fep.MailSmtp.sscode = guugsmckizmadhfj
+
+[2023-05-03 16:04:25.953][restartedMain][INFO ][GeneralLogger]Sms Configuration:
+  spring.fep.sms.domain = null
+  spring.fep.sms.username = null
+  spring.fep.sms.sscode = null
+
+[2023-05-03 16:04:25.959][restartedMain][INFO ][SyscomGeneralLogger]Safeaa Syscom Configruation:
+  safeaa.config.culture = zh-TW
+  safeaa.config.batchQueue = .private$batch_queue
+  safeaa.config.applyTemplate = false
+
+[2023-05-03 16:04:26.043][restartedMain][INFO ][com.syscom.fep.web.SyscomFepWebApplication]Started SyscomFepWebApplication in 46.163 seconds (JVM running for 48.841)
+[2023-05-03 16:05:00.006][SchedulerJob_Worker-1][INFO ][SchedulerLogger]AppMonitorJob start to execute...
+[2023-05-03 16:05:00.055][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.memory.used]>>>>>>>>>>
+[2023-05-03 16:05:01.045][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.memory.used]<<<<<<<<<<{"name":"jvm.memory.used","description":"The amount of used memory","baseUnit":"bytes","measurements":[{"statistic":"VALUE","value":3.11654992E8}],"availableTags":[{"tag":"area","values":["heap","nonheap"]},{"tag":"application","values":["fep-web"]},{"tag":"id","values":["CodeHeap 'profiled nmethods'","G1 Old Gen","CodeHeap 'non-profiled nmethods'","G1 Survivor Space","Compressed Class Space","Metaspace","G1 Eden Space","CodeHeap 'non-nmethods'"]}]}
+[2023-05-03 16:05:01.085][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.cpu.usage]>>>>>>>>>>
+[2023-05-03 16:05:07.282][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.cpu.usage]<<<<<<<<<<{"name":"process.cpu.usage","description":"The \"recent cpu usage\" for the Java Virtual Machine process","baseUnit":null,"measurements":[{"statistic":"VALUE","value":0.11736807077689025}],"availableTags":[{"tag":"application","values":["fep-web"]}]}
+[2023-05-03 16:05:07.293][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.threads.states]>>>>>>>>>>
+[2023-05-03 16:05:07.305][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.threads.states]<<<<<<<<<<{"name":"jvm.threads.states","description":"The current number of threads having RUNNABLE state","baseUnit":"threads","measurements":[{"statistic":"VALUE","value":65.0}],"availableTags":[{"tag":"application","values":["fep-web"]},{"tag":"state","values":["timed-waiting","new","runnable","blocked","waiting","terminated"]}]}
+[2023-05-03 16:05:07.315][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.start.time]>>>>>>>>>>
+[2023-05-03 16:05:07.322][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.start.time]<<<<<<<<<<{"name":"process.start.time","description":"Start time of the process since unix epoch.","baseUnit":"seconds","measurements":[{"statistic":"VALUE","value":1.683101017278E9}],"availableTags":[{"tag":"application","values":["fep-web"]}]}
+[2023-05-03 16:05:07.336][SchedulerJob_Worker-1][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8201/api/mon/SendMessage]>>>>>>>>>>{smsThreads=65, smsServicestate=1, smsHostname=centos8.host, smsRam=304350, smsStarttime=2023/05/03 16:03:37, smsServiceip=127.0.0.1, smsServicename=fep-web, smsCpu=1174}
+[2023-05-03 16:05:07.356][SchedulerJob_Worker-1][WARN ][SchedulerLogger]sendMonitorMessage failed with exception occur = [CONNECTION_REFUSED]
+[2023-05-03 16:05:07.356][SchedulerJob_Worker-1][INFO ][SchedulerLogger]AppMonitorJob execute finished...
+[2023-05-03 16:05:10.114][INFO ][FEPWebMessageLogger ]|||||||用戶訪問頁面, 功能名稱 = [預設頁面], 視圖名稱 = [login], 鏈接 = [/]
+[2023-05-03 16:05:12.528][INFO ][FEPWebMessageLogger ]|||||||使用者帳號 = [admin]登陸
+[2023-05-03 16:05:12.530][DEBUG][FEPWebMessageLogger ]|||||||Header : host , value : localhost:8081
+[2023-05-03 16:05:12.530][DEBUG][FEPWebMessageLogger ]|||||||Header : connection , value : keep-alive
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : content-length , value : 60
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : cache-control , value : max-age=0
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-ch-ua , value : "Chromium";v="112", "Microsoft Edge";v="112", "Not:A-Brand";v="99"
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-ch-ua-mobile , value : ?0
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-ch-ua-platform , value : "Windows"
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : upgrade-insecure-requests , value : 1
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : origin , value : http://localhost:8081
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : content-type , value : application/x-www-form-urlencoded
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : user-agent , value : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.64
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : accept , value : text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-site , value : same-origin
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-mode , value : navigate
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-user , value : ?1
+[2023-05-03 16:05:12.531][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-dest , value : document
+[2023-05-03 16:05:12.532][DEBUG][FEPWebMessageLogger ]|||||||Header : referer , value : http://localhost:8081/
+[2023-05-03 16:05:12.532][DEBUG][FEPWebMessageLogger ]|||||||Header : accept-encoding , value : gzip, deflate, br
+[2023-05-03 16:05:12.532][DEBUG][FEPWebMessageLogger ]|||||||Header : accept-language , value : zh-TW,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+[2023-05-03 16:05:12.532][DEBUG][FEPWebMessageLogger ]|||||||Header : cookie , value : Idea-82c3cbc4=1c86de3c-0de1-469f-82f0-2dfe89a1ea80; JSESSIONID=3D170B6420E57D32960B407C70B0EF2F
+[2023-05-03 16:05:12.901][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.getSyscomuserInfo]==>  Preparing: SELECT a.IDNO, a.UserId, a.LogOnId, a.EMPID, a.EmployeeId, a.UserName, a.EmailAddress, a.Birthday, b.SSCODE, b.SSCODESalt, b.IsLogOn, b.IsLockout, b.SSCODEErrorCount, b.SSCODEFormat, b.FailedPswAnsAttemptCount FROM SyscomUser a INNER JOIN SyscomUserStatus b ON a.UserId = b.UserId WHERE a.LogOnId = ?
+[2023-05-03 16:05:12.943][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.getSyscomuserInfo]==> Parameters: admin(String)
+[2023-05-03 16:05:13.441][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. SELECT a.IDNO, a.UserId, a.LogOnId, a.EMPID, a.EmployeeId, a.UserName, a.EmailAddress, a.Birthday, 
+b.SSCODE, b.SSCODESalt, b.IsLogOn, b.IsLockout, b.SSCODEErrorCount, b.SSCODEFormat, b.FailedPswAnsAttemptCount 
+FROM SyscomUser a INNER JOIN SyscomUserStatus b ON a.UserId = b.UserId WHERE a.LogOnId = 'admin' 
+ {executed in 496 msec}
+[2023-05-03 16:05:13.822][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.getSyscomuserInfo]<==      Total: 1
+[2023-05-03 16:05:13.846][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserMapper.selectByPrimaryKey]==>  Preparing: select USERID, LOGONID, USERNAME, EMPLOYEEID, IDNO, BIRTHDAY, EFFECTDATE, EXPIREDDATE, EMAILADDRESS, UPDATEUSERID, UPDATETIME, EMPID from SYSCOMUSER where USERID = ?
+[2023-05-03 16:05:13.850][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserMapper.selectByPrimaryKey]==> Parameters: 1(Integer)
+[2023-05-03 16:05:14.172][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. select USERID, LOGONID, USERNAME, EMPLOYEEID, IDNO, BIRTHDAY, EFFECTDATE, EXPIREDDATE, EMAILADDRESS, 
+UPDATEUSERID, UPDATETIME, EMPID from SYSCOMUSER where USERID = 1 
+ {executed in 321 msec}
+[2023-05-03 16:05:14.245][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserMapper.selectByPrimaryKey]<==      Total: 1
+[2023-05-03 16:05:14.247][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserstatusMapper.selectByPrimaryKey]==>  Preparing: select USERID, LOGONTIME, LOGONIP, ISLOGON, LOGONCHANGESSCODE, LASTSSCODECHANGETIME, SSCODEERRORCOUNT, LASTLOGONTIME, LASTLOGONIP, LASTLOGOFFTIME, SSCODE, SSCODEFORMAT, SSCODESALT, PKISERIALNO, SSCODEHINTQUESTION, SSCODEHINTANSWER, FAILEDPSWANSATTEMPTCOUNT, ISLOCKOUT, LASTLOCKOUTTIME, FAILEDPSWATTEMPTTIME, FAILEDPSWANSATTEMPTTIME, SSCODEEFFECTDATE, APDEFINE1, APDEFINE2 from SYSCOMUSERSTATUS where USERID = ?
+[2023-05-03 16:05:14.247][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserstatusMapper.selectByPrimaryKey]==> Parameters: 1(Integer)
+[2023-05-03 16:05:14.326][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. select USERID, LOGONTIME, LOGONIP, ISLOGON, LOGONCHANGESSCODE, LASTSSCODECHANGETIME, SSCODEERRORCOUNT, 
+LASTLOGONTIME, LASTLOGONIP, LASTLOGOFFTIME, SSCODE, SSCODEFORMAT, SSCODESALT, PKISERIALNO, 
+SSCODEHINTQUESTION, SSCODEHINTANSWER, FAILEDPSWANSATTEMPTCOUNT, ISLOCKOUT, LASTLOCKOUTTIME, 
+FAILEDPSWATTEMPTTIME, FAILEDPSWANSATTEMPTTIME, SSCODEEFFECTDATE, APDEFINE1, APDEFINE2 from 
+SYSCOMUSERSTATUS where USERID = 1 
+ {executed in 79 msec}
+[2023-05-03 16:05:14.354][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserstatusMapper.selectByPrimaryKey]<==      Total: 1
+[2023-05-03 16:05:14.355][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscompolicyExtMapper.queryAllData]==>  Preparing: select POLICYID, POLICYNO, ALLOWLOCAL, GETVALUETYPE, DEFAULTPOLICYVALUE, INVALIDMESSAGEID, EFFECTDATE, EXPIREDDATE, UPDATEUSERID, UPDATETIME from SYSCOMPOLICY
+[2023-05-03 16:05:14.356][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscompolicyExtMapper.queryAllData]==> Parameters: 
+[2023-05-03 16:05:14.417][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. select POLICYID, POLICYNO, ALLOWLOCAL, GETVALUETYPE, DEFAULTPOLICYVALUE, INVALIDMESSAGEID, 
+EFFECTDATE, EXPIREDDATE, UPDATEUSERID, UPDATETIME from SYSCOMPOLICY 
+ {executed in 60 msec}
+[2023-05-03 16:05:14.456][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscompolicyExtMapper.queryAllData]<==      Total: 26
+[2023-05-03 16:05:14.555][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomauditlogMapper.insert]==>  Preparing: insert into SYSCOMAUDITLOG (LOGID, USERID, UPDATETIME, AUDITTYPE, RESULT, AUDITTARGET, UPDATELOGONIP, APPLICATIONID, INCLUDEPERSONALDATA, REMARK, APDEFINE1, APDEFINE2 ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2023-05-03 16:05:14.556][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomauditlogMapper.insert]==> Parameters: 302bf33b-4b87-4e93-afb7-d935a62700ae(String), 1(Integer), 2023-05-03 16:05:14.554(Timestamp), 4(Integer), 1(Short), (String), 0:0:0:0:0:0:0:1(String), null, null, null, null, null
+[2023-05-03 16:05:14.572][SafeaaInsertAuditTrailThread][WARN ][SyscomGeneralLogger][SafeaaAuditTrailInterceptor.process], mapper: com.syscom.safeaa.mybatis.mapper.SyscomauditlogMapper.insert, cannot insert audit trail for method "insert"
+[2023-05-03 16:05:14.610][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. insert into SYSCOMAUDITLOG (LOGID, USERID, UPDATETIME, AUDITTYPE, RESULT, AUDITTARGET, UPDATELOGONIP, 
+APPLICATIONID, INCLUDEPERSONALDATA, REMARK, APDEFINE1, APDEFINE2 ) values ('302bf33b-4b87-4e93-afb7-d935a62700ae', 
+1, '05/03/2023 16:05:14.554', 4, 1, '', '0:0:0:0:0:0:0:1', NULL, NULL, NULL, NULL, NULL ) 
+ {executed in 54 msec}
+[2023-05-03 16:05:14.611][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomauditlogMapper.insert]<==    Updates: 1
+[2023-05-03 16:05:14.612][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserstatusMapper.updateByPrimaryKey]==>  Preparing: update SYSCOMUSERSTATUS set LOGONTIME = ?, LOGONIP = ?, ISLOGON = ?, LOGONCHANGESSCODE = ?, LASTSSCODECHANGETIME = ?, SSCODEERRORCOUNT = ?, LASTLOGONTIME = ?, LASTLOGONIP = ?, LASTLOGOFFTIME = ?, SSCODE = ?, SSCODEFORMAT = ?, SSCODESALT = ?, PKISERIALNO = ?, SSCODEHINTQUESTION = ?, SSCODEHINTANSWER = ?, FAILEDPSWANSATTEMPTCOUNT = ?, ISLOCKOUT = ?, LASTLOCKOUTTIME = ?, FAILEDPSWATTEMPTTIME = ?, FAILEDPSWANSATTEMPTTIME = ?, SSCODEEFFECTDATE = ?, APDEFINE1 = ?, APDEFINE2 = ? where USERID = ?
+[2023-05-03 16:05:14.615][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserstatusMapper.updateByPrimaryKey]==> Parameters: 2023-05-03 16:05:14.611(Timestamp), 0:0:0:0:0:0:0:1(String), 1(Short), 0(Short), 2022-08-10 17:58:15.115(Timestamp), 0(Integer), 2023-05-03 16:02:21.266(Timestamp), 172.16.40.33(String), 2021-06-29 11:11:08.31(Timestamp), 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92(String), 5(Integer),  (String),  (String),  (String),  (String), 0(Integer), 0(Short), 2023-04-26 09:47:21.798(Timestamp), 2021-07-02 13:58:19.817(Timestamp), 2019-10-02 15:09:03.38(Timestamp), 2021-08-25 15:56:15.909(Timestamp), null, null, 1(Integer)
+[2023-05-03 16:05:14.624][SafeaaInsertAuditTrailThread][WARN ][SyscomGeneralLogger][SafeaaAuditTrailInterceptor.process]class java.lang.Long cannot be cast to class java.lang.Integer (java.lang.Long and java.lang.Integer are in module java.base of loader 'bootstrap')
+[2023-05-03 16:05:14.685][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. update SYSCOMUSERSTATUS set LOGONTIME = '05/03/2023 16:05:14.611', LOGONIP = '0:0:0:0:0:0:0:1', 
+ISLOGON = 1, LOGONCHANGESSCODE = 0, LASTSSCODECHANGETIME = '08/10/2022 17:58:15.115', SSCODEERRORCOUNT 
+= 0, LASTLOGONTIME = '05/03/2023 16:02:21.266', LASTLOGONIP = '172.16.40.33', LASTLOGOFFTIME 
+= '06/29/2021 11:11:08.310', SSCODE = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 
+SSCODEFORMAT = 5, SSCODESALT = ' ', PKISERIALNO = ' ', SSCODEHINTQUESTION = ' ', SSCODEHINTANSWER 
+= ' ', FAILEDPSWANSATTEMPTCOUNT = 0, ISLOCKOUT = 0, LASTLOCKOUTTIME = '04/26/2023 09:47:21.798', 
+FAILEDPSWATTEMPTTIME = '07/02/2021 13:58:19.817', FAILEDPSWANSATTEMPTTIME = '10/02/2019 15:09:03.380', 
+SSCODEEFFECTDATE = '08/25/2021 15:56:15.909', APDEFINE1 = NULL, APDEFINE2 = NULL where USERID 
+= 1 
+ {executed in 70 msec}
+[2023-05-03 16:05:14.685][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.mapper.SyscomuserstatusMapper.updateByPrimaryKey]<==    Updates: 1
+[2023-05-03 16:05:14.686][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.getSyscomuserInfo]==>  Preparing: SELECT a.IDNO, a.UserId, a.LogOnId, a.EMPID, a.EmployeeId, a.UserName, a.EmailAddress, a.Birthday, b.SSCODE, b.SSCODESalt, b.IsLogOn, b.IsLockout, b.SSCODEErrorCount, b.SSCODEFormat, b.FailedPswAnsAttemptCount FROM SyscomUser a INNER JOIN SyscomUserStatus b ON a.UserId = b.UserId WHERE a.LogOnId = ?
+[2023-05-03 16:05:14.687][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.getSyscomuserInfo]==> Parameters: admin(String)
+[2023-05-03 16:05:14.734][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. SELECT a.IDNO, a.UserId, a.LogOnId, a.EMPID, a.EmployeeId, a.UserName, a.EmailAddress, a.Birthday, 
+b.SSCODE, b.SSCODESalt, b.IsLogOn, b.IsLockout, b.SSCODEErrorCount, b.SSCODEFormat, b.FailedPswAnsAttemptCount 
+FROM SyscomUser a INNER JOIN SyscomUserStatus b ON a.UserId = b.UserId WHERE a.LogOnId = 'admin' 
+ {executed in 47 msec}
+[2023-05-03 16:05:14.778][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.getSyscomuserInfo]<==      Total: 1
+[2023-05-03 16:05:14.781][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.querySyscomresourceByLogOnId]==>  Preparing: SELECT * FROM ( SELECT USR.USERID, -- 用戶ID USR.LOGONID, -- 登錄ID USR.USERNAME, -- 用戶名 SRM.ROLEID, -- 角色ID SRC.ROLENAME, -- 角色名 0 AS RESOURCEPID, -- 菜單父ID NULL AS RESOURCEPNO, -- 菜單NO SRG.GROUPID AS RESOURCEID, -- 菜單ID SGC.GROUPNAME AS RESOURCENAME, -- 菜單名 SG.GROUPURL AS RESOURCEURL, -- 菜單URL SG.LOCATIONNO AS LOCATIONNOG , 0 AS LOCATIONNOR FROM SYSCOMUSER USR INNER JOIN SYSCOMUSERSTATUS STA ON STA.USERID = USR.USERID LEFT JOIN SYSCOMROLEMEMBERS SRM ON SRM.CHILDID = USR.USERID AND SRM.CHILDTYPE = 'U' LEFT JOIN SYSCOMROLECULTURE SRC ON SRC.ROLEID = SRM.ROLEID LEFT JOIN SYSCOMROLEGROUP SRG ON SRG.ROLEID = SRM.ROLEID LEFT JOIN SYSCOMGROUP SG ON SG.GROUPID = SRG.GROUPID LEFT JOIN SYSCOMGROUPCULTURE SGC ON SGC.GROUPID = SRG.GROUPID WHERE USR.LOGONID = ? AND NOT SRG.GROUPID IS NULL UNION SELECT USR.USERID, -- 用戶ID USR.LOGONID, -- 登錄ID USR.USERNAME, -- 用戶名 SRM.ROLEID, -- 角色ID SRC.ROLENAME, -- 角色名 SGM.GROUPID AS RESOURCEPID, -- 菜單父ID SS.RESOURCENO, -- 菜單NO SRR.RESOURCEID , -- 菜單ID SGC.RESOURCENAME , -- 菜單名 SS.RESOURCEURL, -- 菜單URL 99999 AS LOCATIONNOG, SGM.LOCATIONNO AS LOCATIONNOR FROM SYSCOMUSER USR INNER JOIN SYSCOMUSERSTATUS STA ON STA.USERID = USR.USERID LEFT JOIN SYSCOMROLEMEMBERS SRM ON SRM.CHILDID = USR.USERID AND SRM.CHILDTYPE = 'U' LEFT JOIN SYSCOMROLECULTURE SRC ON SRC.ROLEID = SRM.ROLEID LEFT JOIN SYSCOMROLERESOURCE SRR ON SRR.ROLEID = SRM.ROLEID LEFT JOIN SYSCOMRESOURCE SS ON SS.RESOURCEID = SRR.RESOURCEID LEFT JOIN SYSCOMRESOURCECULTURE SGC ON SGC.RESOURCEID = SRR.RESOURCEID LEFT JOIN SYSCOMGROUPMEMBERS SGM ON SGM.CHILDID = SRR.RESOURCEID WHERE USR.LOGONID = ? AND NOT SRR.RESOURCEID IS NULL ) ORDER BY LOCATIONNOG, LOCATIONNOR
+[2023-05-03 16:05:14.783][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.querySyscomresourceByLogOnId]==> Parameters: admin(String), admin(String)
+[2023-05-03 16:05:14.911][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+17. SELECT * FROM ( SELECT USR.USERID, -- 用戶ID USR.LOGONID, -- 登錄ID USR.USERNAME, -- 用戶名 SRM.ROLEID, 
+-- 角色ID SRC.ROLENAME, -- 角色名 0 AS RESOURCEPID, -- 菜單父ID NULL AS RESOURCEPNO, -- 菜單NO SRG.GROUPID 
+AS RESOURCEID, -- 菜單ID SGC.GROUPNAME AS RESOURCENAME, -- 菜單名 SG.GROUPURL AS RESOURCEURL, -- 
+菜單URL SG.LOCATIONNO AS LOCATIONNOG , 0 AS LOCATIONNOR FROM SYSCOMUSER USR INNER JOIN SYSCOMUSERSTATUS 
+STA ON STA.USERID = USR.USERID LEFT JOIN SYSCOMROLEMEMBERS SRM ON SRM.CHILDID = USR.USERID 
+AND SRM.CHILDTYPE = 'U' LEFT JOIN SYSCOMROLECULTURE SRC ON SRC.ROLEID = SRM.ROLEID LEFT JOIN 
+SYSCOMROLEGROUP SRG ON SRG.ROLEID = SRM.ROLEID LEFT JOIN SYSCOMGROUP SG ON SG.GROUPID = SRG.GROUPID 
+LEFT JOIN SYSCOMGROUPCULTURE SGC ON SGC.GROUPID = SRG.GROUPID WHERE USR.LOGONID = 'admin' AND 
+NOT SRG.GROUPID IS NULL UNION SELECT USR.USERID, -- 用戶ID USR.LOGONID, -- 登錄ID USR.USERNAME, 
+-- 用戶名 SRM.ROLEID, -- 角色ID SRC.ROLENAME, -- 角色名 SGM.GROUPID AS RESOURCEPID, -- 菜單父ID SS.RESOURCENO, 
+-- 菜單NO SRR.RESOURCEID , -- 菜單ID SGC.RESOURCENAME , -- 菜單名 SS.RESOURCEURL, -- 菜單URL 99999 AS 
+LOCATIONNOG, SGM.LOCATIONNO AS LOCATIONNOR FROM SYSCOMUSER USR INNER JOIN SYSCOMUSERSTATUS 
+STA ON STA.USERID = USR.USERID LEFT JOIN SYSCOMROLEMEMBERS SRM ON SRM.CHILDID = USR.USERID 
+AND SRM.CHILDTYPE = 'U' LEFT JOIN SYSCOMROLECULTURE SRC ON SRC.ROLEID = SRM.ROLEID LEFT JOIN 
+SYSCOMROLERESOURCE SRR ON SRR.ROLEID = SRM.ROLEID LEFT JOIN SYSCOMRESOURCE SS ON SS.RESOURCEID 
+= SRR.RESOURCEID LEFT JOIN SYSCOMRESOURCECULTURE SGC ON SGC.RESOURCEID = SRR.RESOURCEID LEFT 
+JOIN SYSCOMGROUPMEMBERS SGM ON SGM.CHILDID = SRR.RESOURCEID WHERE USR.LOGONID = 'admin' AND 
+NOT SRR.RESOURCEID IS NULL ) ORDER BY LOCATIONNOG, LOCATIONNOR 
+ {executed in 128 msec}
+[2023-05-03 16:05:14.969][http-nio-8081-exec-10][DEBUG][com.syscom.safeaa.mybatis.extmapper.SyscomuserExtMapper.querySyscomresourceByLogOnId]<==      Total: 93
+[2023-05-03 16:05:14.973][DEBUG][FEPWebMessageLogger ]|||||||Header : host , value : localhost:8081
+[2023-05-03 16:05:14.973][DEBUG][FEPWebMessageLogger ]|||||||Header : connection , value : keep-alive
+[2023-05-03 16:05:14.973][DEBUG][FEPWebMessageLogger ]|||||||Header : content-length , value : 60
+[2023-05-03 16:05:14.973][DEBUG][FEPWebMessageLogger ]|||||||Header : cache-control , value : max-age=0
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-ch-ua , value : "Chromium";v="112", "Microsoft Edge";v="112", "Not:A-Brand";v="99"
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-ch-ua-mobile , value : ?0
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-ch-ua-platform , value : "Windows"
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : upgrade-insecure-requests , value : 1
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : origin , value : http://localhost:8081
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : content-type , value : application/x-www-form-urlencoded
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : user-agent , value : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.64
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : accept , value : text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-site , value : same-origin
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-mode , value : navigate
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-user , value : ?1
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : sec-fetch-dest , value : document
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : referer , value : http://localhost:8081/
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : accept-encoding , value : gzip, deflate, br
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : accept-language , value : zh-TW,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+[2023-05-03 16:05:14.974][DEBUG][FEPWebMessageLogger ]|||||||Header : cookie , value : Idea-82c3cbc4=1c86de3c-0de1-469f-82f0-2dfe89a1ea80; JSESSIONID=3D170B6420E57D32960B407C70B0EF2F
+[2023-05-03 16:05:15.034][http-nio-8081-exec-10][DEBUG][com.syscom.fep.mybatis.ext.mapper.FepuserExtMapper.getFepUserByLogonId]==>  Preparing: select FEPUSER_USERID, FEPUSER_LOGONID, FEPUSER_BRNO, FEPUSER_BRNO_ST, FEPUSER_TLRNO, FEPUSER_NAME, FEPUSER_JOB, FEPUSER_GROUP, FEPUSER_LU_DATE, FEPUSER_LU_TIME, FEPUSER_STATUS, UPDATE_USERID, UPDATE_TIME, USER_UPDATE_TIME, FEPUSER_BOSS, FEPUSER_LEVEL from FEPUSER where FEPUSER_LOGONID = ?
+[2023-05-03 16:05:15.034][http-nio-8081-exec-10][DEBUG][com.syscom.fep.mybatis.ext.mapper.FepuserExtMapper.getFepUserByLogonId]==> Parameters: admin(String)
+[2023-05-03 16:05:15.070][http-nio-8081-exec-10][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select FEPUSER_USERID, FEPUSER_LOGONID, FEPUSER_BRNO, FEPUSER_BRNO_ST, FEPUSER_TLRNO, FEPUSER_NAME, 
+FEPUSER_JOB, FEPUSER_GROUP, FEPUSER_LU_DATE, FEPUSER_LU_TIME, FEPUSER_STATUS, UPDATE_USERID, 
+UPDATE_TIME, USER_UPDATE_TIME, FEPUSER_BOSS, FEPUSER_LEVEL from FEPUSER where FEPUSER_LOGONID 
+= 'admin' 
+ {executed in 36 msec}
+[2023-05-03 16:05:15.108][http-nio-8081-exec-10][DEBUG][com.syscom.fep.mybatis.ext.mapper.FepuserExtMapper.getFepUserByLogonId]<==      Total: 1
+[2023-05-03 16:05:15.109][INFO ][FEPWebMessageLogger ]|1|admin|0:0:0:0:0:0:0:1||||redirect to [/home]
+[2023-05-03 16:05:25.774][INFO ][FEPWebMessageLogger ]|1|admin|0:0:0:0:0:0:0:1|批次啟動作業|batch/UI_000110|/39/batch/UI_000110/index|用戶訪問頁面, 功能名稱 = [批次啟動作業], 視圖名稱 = [batch/UI_000110], 鏈接 = [/39/batch/UI_000110/index]
+[2023-05-03 16:05:25.788][INFO ][FEPWebMessageLogger ]|1|admin|0:0:0:0:0:0:0:1|批次啟動作業|batch/UI_000110|/39/batch/UI_000110/index|查詢數據, 條件 = [UI_000110_Form[autoRefresh=false,batchCurrentId=<null>,batchId=<null>,batchName=<null>,batchStartJobId=<null>,isRedirectFromPageChanged=false,pageNum=1,pageSize=20,sqlSortExpressionList=[],url=/batch/UI_000110/doQuery]]
+[2023-05-03 16:05:28.713][http-nio-8081-exec-8][DEBUG][com.syscom.fep.mybatis.ext.mapper.BatchExtMapper.getAllBatch_COUNT]==>  Preparing: SELECT count(0) FROM BATCH LEFT JOIN JOBS ON BATCH.BATCH_STARTJOBID = JOBS.JOBS_JOBID WHERE BATCH.BATCH_SUBSYS IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2023-05-03 16:05:28.714][http-nio-8081-exec-8][DEBUG][com.syscom.fep.mybatis.ext.mapper.BatchExtMapper.getAllBatch_COUNT]==> Parameters: 1(String), 2(String), 3(String), 4(String), 5(String), 6(String), 7(String), 8(String), 9(String), 10(String), 11(String), 12(String), 13(String), 14(String)
+[2023-05-03 16:05:29.442][http-nio-8081-exec-8][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT count(0) FROM BATCH LEFT JOIN JOBS ON BATCH.BATCH_STARTJOBID = JOBS.JOBS_JOBID WHERE 
+BATCH.BATCH_SUBSYS IN ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', 
+'14') 
+ {executed in 727 msec}
+[2023-05-03 16:05:29.479][http-nio-8081-exec-8][DEBUG][com.syscom.fep.mybatis.ext.mapper.BatchExtMapper.getAllBatch_COUNT]<==      Total: 1
+[2023-05-03 16:05:29.485][http-nio-8081-exec-8][DEBUG][com.syscom.fep.mybatis.ext.mapper.BatchExtMapper.getAllBatch]==>  Preparing: SELECT * FROM (SELECT TMP_PAGE.*,ROWNUMBER() OVER() AS PAGEHELPER_ROW_ID FROM ( SELECT BATCH.*,JOBS_NAME FROM BATCH LEFT JOIN JOBS ON BATCH.BATCH_STARTJOBID = JOBS.JOBS_JOBID WHERE BATCH.BATCH_SUBSYS IN ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) ORDER BY BATCH_NAME ) AS TMP_PAGE) TMP_PAGE WHERE PAGEHELPER_ROW_ID BETWEEN ? AND ?
+[2023-05-03 16:05:29.486][http-nio-8081-exec-8][DEBUG][com.syscom.fep.mybatis.ext.mapper.BatchExtMapper.getAllBatch]==> Parameters: 1(String), 2(String), 3(String), 4(String), 5(String), 6(String), 7(String), 8(String), 9(String), 10(String), 11(String), 12(String), 13(String), 14(String), 1(Long), 20(Long)
+[2023-05-03 16:05:29.708][http-nio-8081-exec-8][DEBUG][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM (SELECT TMP_PAGE.*,ROWNUMBER() OVER() AS PAGEHELPER_ROW_ID FROM ( SELECT BATCH.*,JOBS_NAME 
+FROM BATCH LEFT JOIN JOBS ON BATCH.BATCH_STARTJOBID = JOBS.JOBS_JOBID WHERE BATCH.BATCH_SUBSYS 
+IN ( '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' , '12' , '13' , '14' 
+) ORDER BY BATCH_NAME ) AS TMP_PAGE) TMP_PAGE WHERE PAGEHELPER_ROW_ID BETWEEN 1 AND 20 
+ {executed in 222 msec}
+[2023-05-03 16:05:29.745][http-nio-8081-exec-8][DEBUG][com.syscom.fep.mybatis.ext.mapper.BatchExtMapper.getAllBatch]<==      Total: 20
+[2023-05-03 16:05:29.752][DEBUG][FEPWebMessageLogger ]|1|admin|0:0:0:0:0:0:0:1|批次啟動作業|batch/UI_000110|/39/batch/UI_000110/index|服務端響應用戶請求, modelAndView = [ModelAndView [view="batch/UI_000110"; model={form=UI_000110_Form[autoRefresh=false,batchCurrentId=<null>,batchId=<null>,batchName=<null>,batchStartJobId=<null>,isRedirectFromPageChanged=false,pageNum=1,pageSize=20,sqlSortExpressionList=[],url=/batch/UI_000110/doQuery], pageData=PageInfo{pageNum=1, pageSize=20, size=20, startRow=1, endRow=20, total=40, pages=2, list=Page{count=true, pageNum=1, pageSize=20, startRow=0, endRow=20, total=40, pages=2, reasonable=false, pageSizeZero=true}[{BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=1, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=1, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1175, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=null, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=0, BATCH_BATCHID=774, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=, BATCH_CURRENTID=51ead7a6-4c53-4467-a0ee-808c2d292f9f, JOBS_NAME=aaa, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2023-01-12 14:43:14.094, BATCH_SINGLETIME=0, BATCH_NAME=aaa}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=2, BATCH_NEXTRUNTIME=2023-01-01 08:00:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=983, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=備份網站記錄檔, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=0, BATCH_BATCHID=352, BATCH_SCHEDULE=0, BATCH_STARTGROUP=A1111,M001,M002,M003,M004,M005,M006,M007,M008,M009,M011,M012,M11,S001,SUPER,TEST01,TTT, BATCH_EDITGROUP=, BATCH_CURRENTID=c1c1c5c4-514c-460d-ba0f-a4f2c02cc686, JOBS_NAME=ImportMERCHANT, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-03-31 08:00:00.507, BATCH_SINGLETIME=0, BATCH_NAME=Archive WebAudit}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=3, BATCH_NEXTRUNTIME=2022-12-31 11:14:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=3, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=0, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=至不同地區的資料庫撈取TBDAY檔再寫入FEP BSDAYS檔的批次並產生差異報表, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=0, BATCH_BATCHID=430, BATCH_SCHEDULE=1, BATCH_STARTGROUP=M001,SUPER, BATCH_EDITGROUP=, BATCH_CURRENTID=79cee906-db53-43ec-9fc5-95b79f0fbe6e, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2023-01-07 11:21:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-12-13 10:37:11.662, BATCH_SINGLETIME=0, BATCH_NAME=ATMP_ImportBSDAYS}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=4, color=red, BATCH_NEXTRUNTIME=2022-08-02 03:00:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=987, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=將LOG目錄下的紀錄檔(視保留天數)備份至指定目錄後並清除, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=false, BATCH_RESULT=2, BATCH_BATCHID=183, BATCH_SCHEDULE=1, BATCH_STARTGROUP=M002,S001,SUPER, BATCH_EDITGROUP=null, BATCH_CURRENTID=ebbd30b3-167d-4027-bab1-f895d8f1b0bb, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2017-11-30 03:00:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-08-01 03:00:00.963, BATCH_SINGLETIME=0, BATCH_NAME=CMN_ArchivingLogFile}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=5, BATCH_NEXTRUNTIME=2022-08-02 02:00:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1336, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=備份到歷史資料庫, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=0, BATCH_BATCHID=237, BATCH_SCHEDULE=1, BATCH_STARTGROUP=M001,S001,SUPER, BATCH_EDITGROUP=null, BATCH_CURRENTID=fe651aef-849c-4318-9641-7112d25abe48, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2016-08-09 02:00:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-08-01 02:00:01.857, BATCH_SINGLETIME=0, BATCH_NAME=CMN_ArchivingTable}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=6, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1284, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=備份到歷史資料庫, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=527, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=null, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=null, BATCH_SINGLETIME=0, BATCH_NAME=CMN_ArchivingTable_Pro}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=7, BATCH_NEXTRUNTIME=2022-08-02 02:30:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=340, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=清除DESLog, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=210, BATCH_SCHEDULE=1, BATCH_STARTGROUP=C001,M001, BATCH_EDITGROUP=null, BATCH_CURRENTID=4f56e24f-fabe-42ae-8543-8b9f2b85e31e, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2012-06-08 02:30:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-08-01 02:30:00.773, BATCH_SINGLETIME=0, BATCH_NAME=CMN_CleanDESLog}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=8, BATCH_NEXTRUNTIME=2022-08-02 01:30:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=2, BATCH_STARTJOBID=143, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=清除FEPLog, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=150, BATCH_SCHEDULE=1, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=57c5129e-1477-4a4c-88c0-7b8dc127f04c, JOBS_NAME=BTRMInBatch, BATCH_SCHEDULE_STARTTIME=2010-11-02 01:30:00.0, BATCH_NOTIFYMAIL=michael.shieh@ma, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-08-01 01:30:01.43, BATCH_SINGLETIME=0, BATCH_NAME=CMN_CleanFEPLog}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=9, BATCH_NEXTRUNTIME=2022-08-01 18:00:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=716, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=清除FEPLog_History, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=2, BATCH_BATCHID=347, BATCH_SCHEDULE=1, BATCH_STARTGROUP=A1111,M001,M002,M003,M004,M005,M006,M007,M008,M009,M011,M012,M11,S001,SUPER,TEST01,TTT, BATCH_EDITGROUP=null, BATCH_CURRENTID=37eb3cb1-d4ed-4e60-b75f-080be323f756, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2014-10-10 18:00:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-07-31 18:00:01.523, BATCH_SINGLETIME=0, BATCH_NAME=CMN_CleanFEPLog_History}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=10, BATCH_NEXTRUNTIME=2020-12-14 18:05:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=144, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=清除FEPTXN, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=2, BATCH_BATCHID=151, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=76a5e5e5-47b5-46c0-a17a-853930a24bda, JOBS_NAME=RM_BatchDaily, BATCH_SCHEDULE_STARTTIME=2010-11-02 18:05:00.0, BATCH_NOTIFYMAIL=michael.shieh@m, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-05-25 15:56:42.007, BATCH_SINGLETIME=0, BATCH_NAME=CMN_CleanFEPTXN}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=11, color=red, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=780, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=備份前一財金營業日的交易資料到歷史資料庫, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=false, BATCH_RESULT=1, BATCH_BATCHID=386, BATCH_SCHEDULE=0, BATCH_STARTGROUP=SUPER, BATCH_EDITGROUP=null, BATCH_CURRENTID=20532d26-e98c-4627-a661-ec97b6411886, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2020-04-17 14:30:15.787, BATCH_SINGLETIME=0, BATCH_NAME=CMN_InsertFEPTxnByFISCDate}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=12, BATCH_NEXTRUNTIME=2021-03-03 20:00:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1346, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=4, BATCH_SCHEDULE_MONTHDAYS=3,6, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=歷史資料庫每年三月將前一年度FEPTXN資料倒入FEPTXN年度(第一季), BATCH_SCHEDULE_TYPE=M, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=528, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=a24c9a98-485c-484a-bfc7-2827e152d98a, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2020-03-20 20:00:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2019-12-12 16:17:21.07, BATCH_SINGLETIME=0, BATCH_NAME=CMN_MoveHistoryFeptxn_Q1}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=13, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1347, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=歷史資料庫每年三月將前一年度FEPTXN資料倒入FEPTXN年度(第二季), BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=531, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=79f44fb6-e02d-4fe7-9353-b5b660832fa8, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2019-12-12 15:19:56.37, BATCH_SINGLETIME=1, BATCH_NAME=CMN_MoveHistoryFeptxn_Q2}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=14, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1348, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=歷史資料庫每年三月將前一年度FEPTXN資料倒入FEPTXN年度(第三季), BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=532, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=177741c0-16f1-4419-be3e-b6eaabc54e4e, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2019-12-12 15:20:16.353, BATCH_SINGLETIME=1, BATCH_NAME=CMN_MoveHistoryFeptxn_Q3}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=15, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1349, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=歷史資料庫每年三月將前一年度FEPTXN資料倒入FEPTXN年度(第四季), BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=533, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=null, BATCH_CURRENTID=18a2f200-9571-4cf5-9983-b98ce0737d25, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2019-12-12 15:20:30.627, BATCH_SINGLETIME=1, BATCH_NAME=CMN_MoveHistoryFeptxn_Q4}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=16, BATCH_NEXTRUNTIME=2021-06-23 01:30:00.0, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=345, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=1, BATCH_DESCRIPTION=DES報表, BATCH_SCHEDULE_TYPE=D, BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=211, BATCH_SCHEDULE=1, BATCH_STARTGROUP=M001,SUPER, BATCH_EDITGROUP=null, BATCH_CURRENTID=759970c6-7639-4958-9e40-d99e661ae978, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=2012-06-01 01:30:00.0, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2021-06-22 01:30:02.52, BATCH_SINGLETIME=0, BATCH_NAME=CMN_PushDESLOGToReport}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=17, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=326, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=清批批次目錄下過期目錄及檔案, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=206, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,SUPER, BATCH_EDITGROUP=null, BATCH_CURRENTID=746e52dc-ee79-4006-a836-6a9f16253a81, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2016-06-26 11:15:02.96, BATCH_SINGLETIME=0, BATCH_NAME=CMN_RemoveBatchLog}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=18, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=9, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=331, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=清除一定時間前的DESLog & HSMLog, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=207, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001, BATCH_EDITGROUP=null, BATCH_CURRENTID=null, JOBS_NAME=null, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2016-06-26 11:15:02.96, BATCH_SINGLETIME=0, BATCH_NAME=CMN_RemoveHSMLog}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=19, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=1, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1102, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=將生效資料更新全國性繳費委託單位檔, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=701, BATCH_SCHEDULE=0, BATCH_STARTGROUP=, BATCH_EDITGROUP=, BATCH_CURRENTID=1ceab16f-79eb-4c6a-96aa-d9f0cf21174d, JOBS_NAME=EffectNPSUNIT, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2022-12-13 10:37:32.024, BATCH_SINGLETIME=0, BATCH_NAME=EffectNPSUNIT}, {BATCH_SCHEDULE_REPETITIONINDURATION=0, BATCH_CHECKBUSINESSDATE=0, BATCH_ENABLE=1, BATCH_ZONE=TWN, PAGEHELPER_ROW_ID=20, BATCH_NEXTRUNTIME=null, BATCH_SCHEDULE_WEEKDAYS=0, BATCH_SUBSYS=1, BATCH_NOTIFYTYPE=0, BATCH_STARTJOBID=1185, BATCH_SCHEDULE_WEEKINTERVAL=0, BATCH_EXECUTE_HOST_NAME=null, BATCH_SCHEDULE_MONTHS=0, BATCH_SCHEDULE_MONTHDAYS=0, BATCH_SCHEDULE_DAYINTERVAL=0, BATCH_DESCRIPTION=aa, BATCH_SCHEDULE_TYPE= , BATCH_ACTION=null, startBtn=true, BATCH_RESULT=1, BATCH_BATCHID=783, BATCH_SCHEDULE=0, BATCH_STARTGROUP=M001,M002,M003,M004,M005,M006,M007,M008,M009,M010,M011,S001,SUPER,TEST01, BATCH_EDITGROUP=, BATCH_CURRENTID=e0b2e968-58b3-4a39-ac45-913354076960, JOBS_NAME=FISCRecovery, BATCH_SCHEDULE_STARTTIME=null, BATCH_NOTIFYMAIL=null, BATCH_SCHEDULE_WHICKWEEKS=null, BATCH_SCHEDULE_REPETITIONINTERVAL=0, BATCH_LASTRUNTIME=2023-02-08 17:19:40.403, BATCH_SINGLETIME=0, BATCH_NAME=FISCRecovery}], prePage=0, nextPage=2, isFirstPage=true, isLastPage=false, hasPreviousPage=false, hasNextPage=true, navigatePages=8, navigateFirstPage=1, navigateLastPage=2, navigatepageNums=[1, 2]}, org.springframework.validation.BindingResult.form=org.springframework.validation.BeanPropertyBindingResult: 0 errors, org.springframework.validation.BindingResult.pageData=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]]
+[2023-05-03 16:05:29.754][INFO ][FEPWebMessageLogger ]|1|admin|0:0:0:0:0:0:0:1|批次啟動作業|batch/UI_000110|/39/batch/UI_000110/index|服務端返回頁面, 功能名稱 = [批次啟動作業], 視圖名稱 = [batch/UI_000110], 鏈接 = [/39/batch/UI_000110/index]
+[2023-05-03 16:06:00.001][SchedulerJob_Worker-2][INFO ][SchedulerLogger]AppMonitorJob start to execute...
+[2023-05-03 16:06:00.015][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.memory.used]>>>>>>>>>>
+[2023-05-03 16:06:00.023][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.memory.used]<<<<<<<<<<{"name":"jvm.memory.used","description":"The amount of used memory","baseUnit":"bytes","measurements":[{"statistic":"VALUE","value":3.40254528E8}],"availableTags":[{"tag":"area","values":["heap","nonheap"]},{"tag":"application","values":["fep-web"]},{"tag":"id","values":["CodeHeap 'profiled nmethods'","G1 Old Gen","CodeHeap 'non-profiled nmethods'","G1 Survivor Space","Compressed Class Space","Metaspace","G1 Eden Space","CodeHeap 'non-nmethods'"]}]}
+[2023-05-03 16:06:00.034][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.cpu.usage]>>>>>>>>>>
+[2023-05-03 16:06:00.083][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.cpu.usage]<<<<<<<<<<{"name":"process.cpu.usage","description":"The \"recent cpu usage\" for the Java Virtual Machine process","baseUnit":null,"measurements":[{"statistic":"VALUE","value":0.028444110111139606}],"availableTags":[{"tag":"application","values":["fep-web"]}]}
+[2023-05-03 16:06:00.094][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.threads.states]>>>>>>>>>>
+[2023-05-03 16:06:00.099][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/jvm.threads.states]<<<<<<<<<<{"name":"jvm.threads.states","description":"The current number of threads having RUNNABLE state","baseUnit":"threads","measurements":[{"statistic":"VALUE","value":72.0}],"availableTags":[{"tag":"application","values":["fep-web"]},{"tag":"state","values":["timed-waiting","new","runnable","blocked","waiting","terminated"]}]}
+[2023-05-03 16:06:00.111][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.start.time]>>>>>>>>>>
+[2023-05-03 16:06:00.115][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8081/actuator/metrics/process.start.time]<<<<<<<<<<{"name":"process.start.time","description":"Start time of the process since unix epoch.","baseUnit":"seconds","measurements":[{"statistic":"VALUE","value":1.683101017278E9}],"availableTags":[{"tag":"application","values":["fep-web"]}]}
+[2023-05-03 16:06:00.126][SchedulerJob_Worker-2][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8201/api/mon/SendMessage]>>>>>>>>>>{smsThreads=72, smsServicestate=1, smsHostname=centos8.host, smsRam=332279, smsStarttime=2023/05/03 16:03:37, smsServiceip=127.0.0.1, smsServicename=fep-web, smsCpu=284}
+[2023-05-03 16:06:00.130][SchedulerJob_Worker-2][WARN ][SchedulerLogger]sendMonitorMessage failed with exception occur = [CONNECTION_REFUSED]
+[2023-05-03 16:06:00.130][SchedulerJob_Worker-2][INFO ][SchedulerLogger]AppMonitorJob execute finished...
+[2023-05-03 16:06:48.458][SpringApplicationShutdownHook][DEBUG][com.syscom.fep.frmcommon.net.http.HttpClient][http://127.0.0.1:8201/api/mon/SendMessage]>>>>>>>>>>{smsThreads=0, smsServicestate=0, smsStoptime=2023/05/03 16:06:48, smsHostname=centos8.host, smsRam=0, smsServiceip=127.0.0.1, smsServicename=fep-web, smsCpu=0}
+[2023-05-03 16:06:48.461][SpringApplicationShutdownHook][WARN ][SchedulerLogger]sendMonitorMessage failed with exception occur = [CONNECTION_REFUSED]
+[2023-05-03 16:06:48.477][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-1 - Shutdown initiated...
+[2023-05-03 16:06:48.485][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-1 - Shutdown completed.
+[2023-05-03 16:06:48.486][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-4 - Shutdown initiated...
+[2023-05-03 16:06:48.488][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-4 - Shutdown completed.
+[2023-05-03 16:06:48.489][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-2 - Shutdown initiated...
+[2023-05-03 16:06:48.491][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-2 - Shutdown completed.
+[2023-05-03 16:06:48.491][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-3 - Shutdown initiated...
+[2023-05-03 16:06:48.494][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-3 - Shutdown completed.
+[2023-05-03 16:06:48.495][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-5 - Shutdown initiated...
+[2023-05-03 16:06:48.498][SpringApplicationShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource]HikariPool-5 - Shutdown completed.

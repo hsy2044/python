@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="ERROR" Date="2023/01/30" Time="10:07:11" HostName="centos8.host" HostIP="127.0.0.1" Application="BaseService.java" Line="45">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="DataAccessResourceFailureException" Description="程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FeptxnExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FeptxnExtMapper.getFeptxnIntltxn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT *         FROM                      FEPTXN19             A                  LEFT JOIN INTLTXN B ON A.FEPTXN_TX_DATE = B.INTLTXN_TX_DATE AND A.FEPTXN_EJFNO = B.INTLTXN_EJFNO                  LEFT JOIN ICTLTXN C ON A.FEPTXN_TX_DATE = C.ICTLTXN_TX_DATE AND A.FEPTXN_EJFNO = C.ICTLTXN_EJFNO                  LEFT JOIN OBTLTXN D ON A.FEPTXN_TX_DATE = D.OBTLTXN_TX_DATE AND A.FEPTXN_EJFNO = D.OBTLTXN_EJFNO                  LEFT JOIN VATXN E ON A.FEPTXN_TX_DATE = E.VATXN_TX_DATE AND A.FEPTXN_EJFNO = E.VATXN_EJFNO                  LEFT JOIN ATMCOINLOG F ON A.FEPTXN_TX_DATE = F.ATMCOINLOG_TX_DATE AND                                            (A.FEPTXN_TRACE_EJFNO = F.ATMCOINLOG_EJFNO OR                                             A.FEPTXN_EJFNO = F.ATMCOINLOG_EJFNO)                  LEFT JOIN ATMBOXLOG G ON A.FEPTXN_TX_DATE = G.ATMBOXLOG_TX_DATE AND                                           (A.FEPTXN_TRACE_EJFNO = G.ATMBOXLOG_EJFNO OR                                            A.FEPTXN_EJFNO = G.ATMBOXLOG_EJFNO)         WHERE A.FEPTXN_EJFNO = ?           AND A.FEPTXN_TX_DATE = ?
+### Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+; DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10; nested exception is com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>FEPMonitor</SubSys><MessageId></MessageId><Message></Message><ProgramName></ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate></TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark></Remark><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode></ExternalCode><ResponseMessage></ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser></TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><ExSubCode>-668</ExSubCode><TxErrDesc>程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FeptxnExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FeptxnExtMapper.getFeptxnIntltxn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT *         FROM                      FEPTXN19             A                  LEFT JOIN INTLTXN B ON A.FEPTXN_TX_DATE = B.INTLTXN_TX_DATE AND A.FEPTXN_EJFNO = B.INTLTXN_EJFNO                  LEFT JOIN ICTLTXN C ON A.FEPTXN_TX_DATE = C.ICTLTXN_TX_DATE AND A.FEPTXN_EJFNO = C.ICTLTXN_EJFNO                  LEFT JOIN OBTLTXN D ON A.FEPTXN_TX_DATE = D.OBTLTXN_TX_DATE AND A.FEPTXN_EJFNO = D.OBTLTXN_EJFNO                  LEFT JOIN VATXN E ON A.FEPTXN_TX_DATE = E.VATXN_TX_DATE AND A.FEPTXN_EJFNO = E.VATXN_EJFNO                  LEFT JOIN ATMCOINLOG F ON A.FEPTXN_TX_DATE = F.ATMCOINLOG_TX_DATE AND                                            (A.FEPTXN_TRACE_EJFNO = F.ATMCOINLOG_EJFNO OR                                             A.FEPTXN_EJFNO = F.ATMCOINLOG_EJFNO)                  LEFT JOIN ATMBOXLOG G ON A.FEPTXN_TX_DATE = G.ATMBOXLOG_TX_DATE AND                                           (A.FEPTXN_TRACE_EJFNO = G.ATMBOXLOG_EJFNO OR                                            A.FEPTXN_EJFNO = G.ATMBOXLOG_EJFNO)         WHERE A.FEPTXN_EJFNO = ?           AND A.FEPTXN_TX_DATE = ?
+### Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+; DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10; nested exception is com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10,CustomMessage:DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10</TxErrDesc><ExSource>SqlException</ExSource><ExStack><![CDATA[org.springframework.dao.DataAccessResourceFailureException: 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FeptxnExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FeptxnExtMapper.getFeptxnIntltxn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT *         FROM                      FEPTXN19             A                  LEFT JOIN INTLTXN B ON A.FEPTXN_TX_DATE = B.INTLTXN_TX_DATE AND A.FEPTXN_EJFNO = B.INTLTXN_EJFNO                  LEFT JOIN ICTLTXN C ON A.FEPTXN_TX_DATE = C.ICTLTXN_TX_DATE AND A.FEPTXN_EJFNO = C.ICTLTXN_EJFNO                  LEFT JOIN OBTLTXN D ON A.FEPTXN_TX_DATE = D.OBTLTXN_TX_DATE AND A.FEPTXN_EJFNO = D.OBTLTXN_EJFNO                  LEFT JOIN VATXN E ON A.FEPTXN_TX_DATE = E.VATXN_TX_DATE AND A.FEPTXN_EJFNO = E.VATXN_EJFNO                  LEFT JOIN ATMCOINLOG F ON A.FEPTXN_TX_DATE = F.ATMCOINLOG_TX_DATE AND                                            (A.FEPTXN_TRACE_EJFNO = F.ATMCOINLOG_EJFNO OR                                             A.FEPTXN_EJFNO = F.ATMCOINLOG_EJFNO)                  LEFT JOIN ATMBOXLOG G ON A.FEPTXN_TX_DATE = G.ATMBOXLOG_TX_DATE AND                                           (A.FEPTXN_TRACE_EJFNO = G.ATMBOXLOG_EJFNO OR                                            A.FEPTXN_EJFNO = G.ATMBOXLOG_EJFNO)         WHERE A.FEPTXN_EJFNO = ?           AND A.FEPTXN_TX_DATE = ?
+### Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+; DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10; nested exception is com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:107)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy106.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy146.getFeptxnIntltxn(Unknown Source)
+	at com.syscom.fep.mybatis.dao.impl.FeptxnDaoImpl.getFeptxnIntltxn(FeptxnDaoImpl.java:240)
+	at com.syscom.fep.mybatis.dao.impl.FeptxnDaoImpl$$FastClassBySpringCGLIB$$7ed882ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.syscom.fep.mybatis.dao.impl.FeptxnDaoImpl$$EnhancerBySpringCGLIB$$f7de962e_5.getFeptxnIntltxn(<generated>)
+	at com.syscom.fep.web.service.AtmService.getFeptxnIntltxn(AtmService.java:562)
+	at com.syscom.fep.web.controller.atmmon.UI_060550Controller.doInquiryDetailForOtherSubSys(UI_060550Controller.java:290)
+	at com.syscom.fep.web.controller.atmmon.UI_060550Controller.doInquiryDetail(UI_060550Controller.java:275)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+	at com.ibm.db2.jcc.am.b7.a(b7.java:815)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.ResultSet.completeSqlca(ResultSet.java:4329)
+	at com.ibm.db2.jcc.am.ResultSet.earlyCloseComplete(ResultSet.java:4311)
+	at com.ibm.db2.jcc.t4.ab.a(ab.java:1658)
+	at com.ibm.db2.jcc.t4.ab.q(ab.java:1620)
+	at com.ibm.db2.jcc.t4.ab.l(ab.java:741)
+	at com.ibm.db2.jcc.t4.ab.d(ab.java:110)
+	at com.ibm.db2.jcc.t4.p.c(p.java:44)
+	at com.ibm.db2.jcc.t4.av.j(av.java:162)
+	at com.ibm.db2.jcc.am.k_.an(k_.java:2276)
+	at com.ibm.db2.jcc.am.la.a(la.java:4699)
+	at com.ibm.db2.jcc.am.la.b(la.java:4215)
+	at com.ibm.db2.jcc.am.la.bg(la.java:2886)
+	at com.ibm.db2.jcc.am.la.execute(la.java:2861)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:417)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at jdk.proxy4/jdk.proxy4.$Proxy238.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at jdk.proxy2/jdk.proxy2.$Proxy234.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy234.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 74 more
+]]></ExStack><TxExternalCode>ProgramException</TxExternalCode><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="ERROR" Date="2023/01/30" Time="10:09:40" HostName="centos8.host" HostIP="127.0.0.1" Application="BaseService.java" Line="45">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="DataAccessResourceFailureException" Description="程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FeptxnExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FeptxnExtMapper.getFeptxnIntltxn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT *         FROM                      FEPTXN19             A                  LEFT JOIN INTLTXN B ON A.FEPTXN_TX_DATE = B.INTLTXN_TX_DATE AND A.FEPTXN_EJFNO = B.INTLTXN_EJFNO                  LEFT JOIN ICTLTXN C ON A.FEPTXN_TX_DATE = C.ICTLTXN_TX_DATE AND A.FEPTXN_EJFNO = C.ICTLTXN_EJFNO                  LEFT JOIN OBTLTXN D ON A.FEPTXN_TX_DATE = D.OBTLTXN_TX_DATE AND A.FEPTXN_EJFNO = D.OBTLTXN_EJFNO                  LEFT JOIN VATXN E ON A.FEPTXN_TX_DATE = E.VATXN_TX_DATE AND A.FEPTXN_EJFNO = E.VATXN_EJFNO                  LEFT JOIN ATMCOINLOG F ON A.FEPTXN_TX_DATE = F.ATMCOINLOG_TX_DATE AND                                            (A.FEPTXN_TRACE_EJFNO = F.ATMCOINLOG_EJFNO OR                                             A.FEPTXN_EJFNO = F.ATMCOINLOG_EJFNO)                  LEFT JOIN ATMBOXLOG G ON A.FEPTXN_TX_DATE = G.ATMBOXLOG_TX_DATE AND                                           (A.FEPTXN_TRACE_EJFNO = G.ATMBOXLOG_EJFNO OR                                            A.FEPTXN_EJFNO = G.ATMBOXLOG_EJFNO)         WHERE A.FEPTXN_EJFNO = ?           AND A.FEPTXN_TX_DATE = ?
+### Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+; DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10; nested exception is com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>FEPMonitor</SubSys><MessageId></MessageId><Message></Message><ProgramName></ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate></TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark></Remark><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode></ExternalCode><ResponseMessage></ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser></TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><ExSubCode>-668</ExSubCode><TxErrDesc>程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FeptxnExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FeptxnExtMapper.getFeptxnIntltxn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT *         FROM                      FEPTXN19             A                  LEFT JOIN INTLTXN B ON A.FEPTXN_TX_DATE = B.INTLTXN_TX_DATE AND A.FEPTXN_EJFNO = B.INTLTXN_EJFNO                  LEFT JOIN ICTLTXN C ON A.FEPTXN_TX_DATE = C.ICTLTXN_TX_DATE AND A.FEPTXN_EJFNO = C.ICTLTXN_EJFNO                  LEFT JOIN OBTLTXN D ON A.FEPTXN_TX_DATE = D.OBTLTXN_TX_DATE AND A.FEPTXN_EJFNO = D.OBTLTXN_EJFNO                  LEFT JOIN VATXN E ON A.FEPTXN_TX_DATE = E.VATXN_TX_DATE AND A.FEPTXN_EJFNO = E.VATXN_EJFNO                  LEFT JOIN ATMCOINLOG F ON A.FEPTXN_TX_DATE = F.ATMCOINLOG_TX_DATE AND                                            (A.FEPTXN_TRACE_EJFNO = F.ATMCOINLOG_EJFNO OR                                             A.FEPTXN_EJFNO = F.ATMCOINLOG_EJFNO)                  LEFT JOIN ATMBOXLOG G ON A.FEPTXN_TX_DATE = G.ATMBOXLOG_TX_DATE AND                                           (A.FEPTXN_TRACE_EJFNO = G.ATMBOXLOG_EJFNO OR                                            A.FEPTXN_EJFNO = G.ATMBOXLOG_EJFNO)         WHERE A.FEPTXN_EJFNO = ?           AND A.FEPTXN_TX_DATE = ?
+### Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+; DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10; nested exception is com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10,CustomMessage:DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10</TxErrDesc><ExSource>SqlException</ExSource><ExStack><![CDATA[org.springframework.dao.DataAccessResourceFailureException: 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FeptxnExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FeptxnExtMapper.getFeptxnIntltxn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT *         FROM                      FEPTXN19             A                  LEFT JOIN INTLTXN B ON A.FEPTXN_TX_DATE = B.INTLTXN_TX_DATE AND A.FEPTXN_EJFNO = B.INTLTXN_EJFNO                  LEFT JOIN ICTLTXN C ON A.FEPTXN_TX_DATE = C.ICTLTXN_TX_DATE AND A.FEPTXN_EJFNO = C.ICTLTXN_EJFNO                  LEFT JOIN OBTLTXN D ON A.FEPTXN_TX_DATE = D.OBTLTXN_TX_DATE AND A.FEPTXN_EJFNO = D.OBTLTXN_EJFNO                  LEFT JOIN VATXN E ON A.FEPTXN_TX_DATE = E.VATXN_TX_DATE AND A.FEPTXN_EJFNO = E.VATXN_EJFNO                  LEFT JOIN ATMCOINLOG F ON A.FEPTXN_TX_DATE = F.ATMCOINLOG_TX_DATE AND                                            (A.FEPTXN_TRACE_EJFNO = F.ATMCOINLOG_EJFNO OR                                             A.FEPTXN_EJFNO = F.ATMCOINLOG_EJFNO)                  LEFT JOIN ATMBOXLOG G ON A.FEPTXN_TX_DATE = G.ATMBOXLOG_TX_DATE AND                                           (A.FEPTXN_TRACE_EJFNO = G.ATMBOXLOG_EJFNO OR                                            A.FEPTXN_EJFNO = G.ATMBOXLOG_EJFNO)         WHERE A.FEPTXN_EJFNO = ?           AND A.FEPTXN_TX_DATE = ?
+### Cause: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+; DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10; nested exception is com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:107)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy106.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy146.getFeptxnIntltxn(Unknown Source)
+	at com.syscom.fep.mybatis.dao.impl.FeptxnDaoImpl.getFeptxnIntltxn(FeptxnDaoImpl.java:240)
+	at com.syscom.fep.mybatis.dao.impl.FeptxnDaoImpl$$FastClassBySpringCGLIB$$7ed882ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.syscom.fep.mybatis.dao.impl.FeptxnDaoImpl$$EnhancerBySpringCGLIB$$f7de962e_10.getFeptxnIntltxn(<generated>)
+	at com.syscom.fep.web.service.AtmService.getFeptxnIntltxn(AtmService.java:562)
+	at com.syscom.fep.web.controller.atmmon.UI_060550Controller.doInquiryDetailForOtherSubSys(UI_060550Controller.java:290)
+	at com.syscom.fep.web.controller.atmmon.UI_060550Controller.doInquiryDetail(UI_060550Controller.java:275)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-668, SQLSTATE=57007, SQLERRMC=7;DBO.INTLTXN, DRIVER=4.31.10
+	at com.ibm.db2.jcc.am.b7.a(b7.java:815)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.ResultSet.completeSqlca(ResultSet.java:4329)
+	at com.ibm.db2.jcc.am.ResultSet.earlyCloseComplete(ResultSet.java:4311)
+	at com.ibm.db2.jcc.t4.ab.a(ab.java:1658)
+	at com.ibm.db2.jcc.t4.ab.q(ab.java:1620)
+	at com.ibm.db2.jcc.t4.ab.l(ab.java:741)
+	at com.ibm.db2.jcc.t4.ab.d(ab.java:110)
+	at com.ibm.db2.jcc.t4.p.c(p.java:44)
+	at com.ibm.db2.jcc.t4.av.j(av.java:162)
+	at com.ibm.db2.jcc.am.k_.an(k_.java:2276)
+	at com.ibm.db2.jcc.am.la.a(la.java:4699)
+	at com.ibm.db2.jcc.am.la.b(la.java:4215)
+	at com.ibm.db2.jcc.am.la.bg(la.java:2886)
+	at com.ibm.db2.jcc.am.la.execute(la.java:2861)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:417)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor626.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at jdk.proxy4/jdk.proxy4.$Proxy238.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at jdk.internal.reflect.GeneratedMethodAccessor638.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at jdk.proxy2/jdk.proxy2.$Proxy234.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy234.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 74 more
+]]></ExStack><TxExternalCode>ProgramException</TxExternalCode><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="14:37:05" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="14:40:10" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="14:44:50" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="15:07:51" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="15:11:57" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="15:25:46" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="15:28:30" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="16:16:18" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="16:19:40" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="16:23:14" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="16:23:46" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="16:37:24" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="16:52:42" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="17:00:12" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="INFO" Date="2023/01/30" Time="17:03:26" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="465">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description="來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message>UI018300</Message><ProgramName>UI_018300</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage>預約跨轉整批重發處理</ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:10218, 預約跨轉整批重發處理![預約跨轉整批重發處理]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="ERROR" Date="2023/01/30" Time="17:03:26" HostName="centos8.host" HostIP="127.0.0.1" Application="UI_018300Controller.java" Line="115">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="RETFRReRun" Description=""/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName>UI_018300</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate>20230130</TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark></Remark><ReturnCode>RETFRReRun</ReturnCode><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF0218</ExternalCode><ResponseMessage></ResponseMessage><Notification>false</Notification><Step>1</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc></TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF0218</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>

@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="ERROR" Date="2023/03/10" Time="14:39:18" HostName="centos8.host" HostIP="127.0.0.1" Application="TxHelper.java" Line="462">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="INBKStatusError" Description="來源:FEP, 代號:11303, 跨行作業系統或應用系統狀態不符![跨行作業系統或應用系統狀態不符]"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId>310100</MessageId><Message></Message><ProgramName>AA3101</ProgramName><MessageFlowType>Debug</MessageFlowType><ProgramFlowType>Debug</ProgramFlowType><STAN>0002143</STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate></TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>3199</EJ><Remark>來源:FEP, 代號:11303, 跨行作業系統或應用系統狀態不符![跨行作業系統或應用系統狀態不符]</Remark><ReturnCode>INBKStatusError</ReturnCode><Bkno>006</Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode>EF1303</ExternalCode><ResponseMessage>跨行作業系統或應用系統狀態不符</ResponseMessage><Notification>false</Notification><Step>4</Step><PCode>3101</PCode><DesBkno>950</DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser>1</TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><TxErrDesc>來源:FEP, 代號:11303, 跨行作業系統或應用系統狀態不符![跨行作業系統或應用系統狀態不符]</TxErrDesc><ExSource/><ExStack/><TxExternalCode>EF1303</TxExternalCode><ExSubCode/><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+[2023-03-10 14:39:31.886][http-nio-8081-exec-4][ERROR][jdbc.sqltiming] com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+10. select FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4, 
+FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4, 
+FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO, 
+FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID, UPDATE_TIME 
+from FCRMSTAT where FCRMSTAT_CURRENCY = '001' 
+ {FAILED after 40 msec}
+com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at com.ibm.db2.jcc.am.b7.a(b7.java:810)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.k_.c(k_.java:2844)
+	at com.ibm.db2.jcc.am.k_.d(k_.java:2828)
+	at com.ibm.db2.jcc.am.k_.a(k_.java:2254)
+	at com.ibm.db2.jcc.am.la.a(la.java:8279)
+	at com.ibm.db2.jcc.t4.ab.i(ab.java:204)
+	at com.ibm.db2.jcc.t4.ab.b(ab.java:94)
+	at com.ibm.db2.jcc.t4.p.a(p.java:32)
+	at com.ibm.db2.jcc.t4.av.i(av.java:150)
+	at com.ibm.db2.jcc.am.k_.al(k_.java:2223)
+	at com.ibm.db2.jcc.am.la.bq(la.java:3763)
+	at com.ibm.db2.jcc.am.la.a(la.java:4642)
+	at com.ibm.db2.jcc.am.la.b(la.java:4215)
+	at com.ibm.db2.jcc.am.la.bg(la.java:2886)
+	at com.ibm.db2.jcc.am.la.execute(la.java:2861)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:417)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor168.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at jdk.proxy4/jdk.proxy4.$Proxy242.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at jdk.proxy2/jdk.proxy2.$Proxy240.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy240.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy177.queryByPrimaryKey(Unknown Source)
+	at com.syscom.fep.web.service.InbkService.getFCRMSTAT(InbkService.java:914)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.getData(UI_013101Controller.java:122)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.queryClick(UI_013101Controller.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-03-10 14:44:55.754][http-nio-8081-exec-4][ERROR][GeneralLogger]程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy177.queryByPrimaryKey(Unknown Source)
+	at com.syscom.fep.web.service.InbkService.getFCRMSTAT(InbkService.java:914)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.getData(UI_013101Controller.java:122)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.queryClick(UI_013101Controller.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at com.ibm.db2.jcc.am.b7.a(b7.java:810)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.k_.c(k_.java:2844)
+	at com.ibm.db2.jcc.am.k_.d(k_.java:2828)
+	at com.ibm.db2.jcc.am.k_.a(k_.java:2254)
+	at com.ibm.db2.jcc.am.la.a(la.java:8279)
+	at com.ibm.db2.jcc.t4.ab.i(ab.java:204)
+	at com.ibm.db2.jcc.t4.ab.b(ab.java:94)
+	at com.ibm.db2.jcc.t4.p.a(p.java:32)
+	at com.ibm.db2.jcc.t4.av.i(av.java:150)
+	at com.ibm.db2.jcc.am.k_.al(k_.java:2223)
+	at com.ibm.db2.jcc.am.la.bq(la.java:3763)
+	at com.ibm.db2.jcc.am.la.a(la.java:4642)
+	at com.ibm.db2.jcc.am.la.b(la.java:4215)
+	at com.ibm.db2.jcc.am.la.bg(la.java:2886)
+	at com.ibm.db2.jcc.am.la.execute(la.java:2861)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:417)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor168.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at jdk.proxy4/jdk.proxy4.$Proxy242.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at jdk.proxy2/jdk.proxy2.$Proxy240.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy240.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="ERROR" Date="2023/03/10" Time="14:44:58" HostName="centos8.host" HostIP="127.0.0.1" Application="BaseService.java" Line="45">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys="FEP"/>
+ 		<Error Code="BadSqlGrammarException" Description="程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><Channel>FEP</Channel><SubSys>INBK</SubSys><MessageId></MessageId><Message></Message><ProgramName></ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate></TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark></Remark><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode></ExternalCode><ResponseMessage></ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser></TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><ExSubCode>-204</ExSubCode><TxErrDesc>程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10,CustomMessage:DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10</TxErrDesc><ExSource>SqlSyntaxErrorException</ExSource><ExStack><![CDATA[org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at jdk.proxy2/jdk.proxy2.$Proxy107.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy177.queryByPrimaryKey(Unknown Source)
+	at com.syscom.fep.web.service.InbkService.getFCRMSTAT(InbkService.java:914)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.getData(UI_013101Controller.java:122)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.queryClick(UI_013101Controller.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at com.ibm.db2.jcc.am.b7.a(b7.java:810)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.k_.c(k_.java:2844)
+	at com.ibm.db2.jcc.am.k_.d(k_.java:2828)
+	at com.ibm.db2.jcc.am.k_.a(k_.java:2254)
+	at com.ibm.db2.jcc.am.la.a(la.java:8279)
+	at com.ibm.db2.jcc.t4.ab.i(ab.java:204)
+	at com.ibm.db2.jcc.t4.ab.b(ab.java:94)
+	at com.ibm.db2.jcc.t4.p.a(p.java:32)
+	at com.ibm.db2.jcc.t4.av.i(av.java:150)
+	at com.ibm.db2.jcc.am.k_.al(k_.java:2223)
+	at com.ibm.db2.jcc.am.la.bq(la.java:3763)
+	at com.ibm.db2.jcc.am.la.a(la.java:4642)
+	at com.ibm.db2.jcc.am.la.b(la.java:4215)
+	at com.ibm.db2.jcc.am.la.bg(la.java:2886)
+	at com.ibm.db2.jcc.am.la.execute(la.java:2861)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:417)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor168.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at jdk.proxy4/jdk.proxy4.$Proxy242.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at jdk.proxy2/jdk.proxy2.$Proxy240.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy240.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 more
+]]></ExStack><TxExternalCode>ProgramException</TxExternalCode><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>
+[2023-03-10 14:44:58.088][http-nio-8081-exec-4][ERROR][GeneralLogger]程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+java.lang.Exception: 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at com.syscom.fep.frmcommon.util.ExceptionUtil.createException(ExceptionUtil.java:25)
+	at com.syscom.fep.web.service.InbkService.getFCRMSTAT(InbkService.java:923)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.getData(UI_013101Controller.java:122)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.queryClick(UI_013101Controller.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+<?xml version="1.0" encoding="utf-8"?>
+ <Event Level="ERROR" Date="2023/03/10" Time="14:44:58" HostName="centos8.host" HostIP="127.0.0.1" Application="UI_013101Controller.java" Line="109">
+ 	<Message>
+ 		<SysInfo Sys="FEP10" SubSys=""/>
+ 		<Error Code="Exception" Description="程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10"/>
+ 		<ATMNo></ATMNo>
+ 		<APMessage><LogData><MessageId></MessageId><Message></Message><ProgramName>UI_013101</ProgramName><STAN></STAN><ATMNo></ATMNo><ATMSeq></ATMSeq><TxDate></TxDate><TroutBank></TroutBank><TroutActno></TroutActno><TrinBank></TrinBank><TrinActno></TrinActno><Chact></Chact><EJ>0</EJ><Remark></Remark><Bkno></Bkno><TableName></TableName><TableDescription></TableDescription><PrimaryKeys></PrimaryKeys><ExternalCode></ExternalCode><ResponseMessage></ResponseMessage><Notification>false</Notification><Step>0</Step><PCode></PCode><DesBkno></DesBkno><FiscRC></FiscRC><MessageGroup></MessageGroup><MessageParm13></MessageParm13><MessageParm14></MessageParm14><TxUser></TxUser><Operator></Operator><Responsible></Responsible><IsNewWebATM>false</IsNewWebATM></LogData><ExSubCode/><TxErrDesc>程式發生例外, 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10</TxErrDesc><ExSource></ExSource><ExStack><![CDATA[java.lang.Exception: 
+### Error querying database.  Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+### The error may exist in file [D:\TCBFEP\source\fep\fep-mybatis\target\classes\com\syscom\fep\mybatis\ext\mapper\xml\FcrmstatExtMapper.xml]
+### The error may involve com.syscom.fep.mybatis.ext.mapper.FcrmstatExtMapper.queryByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select                     FCRMSTAT_CURRENCY, FCRMSTAT_CURRENCY_MEMO, FCRMSTAT_FISCI_FLAG1, FCRMSTAT_FISCI_FLAG4,         FCRMSTAT_FISCO_FLAG1, FCRMSTAT_FISCO_FLAG4, FCRMSTAT_AOCTRM, FCRMSTAT_AOCTRM1, FCRMSTAT_AOCTRM4,         FCRMSTAT_MBACTRM, FCRMSTAT_MBACTRM1, FCRMSTAT_MBACTRM4, FCRMSTAT_CLRACTNO, FCRMSTAT_CLRBKNO,         FCRMSTAT_FISC_CHARGE, FCRMSTAT_INBANK_CHARGE, FCRMSTAT_CLRBANK_CHARGE, UPDATE_USERID,         UPDATE_TIME               from FCRMSTAT         where FCRMSTAT_CURRENCY = ?
+### Cause: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+; bad SQL grammar []; nested exception is com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-204, SQLSTATE=42704, SQLERRMC=DBO.FCRMSTAT, DRIVER=4.31.10
+	at com.syscom.fep.frmcommon.util.ExceptionUtil.createException(ExceptionUtil.java:25)
+	at com.syscom.fep.web.service.InbkService.getFCRMSTAT(InbkService.java:923)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.getData(UI_013101Controller.java:122)
+	at com.syscom.fep.web.controller.inbk.UI_013101Controller.queryClick(UI_013101Controller.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]></ExStack><TxExternalCode>ProgramException</TxExternalCode><TxPK/><TxSource></TxSource></APMessage>
+ 	</Message>
+ </Event>

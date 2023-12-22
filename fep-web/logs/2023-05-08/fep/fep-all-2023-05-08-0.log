@@ -1,0 +1,4 @@
+[2023-05-08 16:45:43.061][background-preinit][INFO ][org.hibernate.validator.internal.util.Version]HV000001: Hibernate Validator 6.2.0.Final
+[2023-05-08 16:45:43.067][main][INFO ][com.syscom.fep.web.safeaa.SafeaaTest]Starting SafeaaTest using Java 17.0.6 on UX410UAR with PID 17248 (started by User in D:\TCBFEP\source\fep\fep-web)
+[2023-05-08 16:45:43.068][main][DEBUG][com.syscom.fep.web.safeaa.SafeaaTest]Running with Spring Boot v2.6.3, Spring v5.3.15
+[2023-05-08 16:45:43.069][main][INFO ][com.syscom.fep.web.safeaa.SafeaaTest]The following profiles are active: integration,mybatis,jms,safeaa
