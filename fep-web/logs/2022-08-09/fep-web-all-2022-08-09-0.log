@@ -1,4 +1,0 @@
-[2022-08-09 18:27:20.461][background-preinit][INFO ][org.hibernate.validator.internal.util.Version]HV000001: Hibernate Validator 6.2.0.Final
-[2022-08-09 18:27:20.521][restartedMain][INFO ][com.syscom.fep.web.SyscomFepWebApplication]Starting SyscomFepWebApplication using Java 17.0.2 on DESKTOP-PKUIKBF with PID 3420 (D:\TCBFEP\source\fep\fep-web\target\classes started by User in D:\TCBFEP\source\fep\fep-web)
-[2022-08-09 18:27:20.522][restartedMain][DEBUG][com.syscom.fep.web.SyscomFepWebApplication]Running with Spring Boot v2.6.3, Spring v5.3.15
-[2022-08-09 18:27:20.523][restartedMain][INFO ][com.syscom.fep.web.SyscomFepWebApplication]The following profiles are active: mybatis,integration,scheduler,jms,safeaa,web,devtools
