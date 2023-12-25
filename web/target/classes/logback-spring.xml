@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<springProperty scope="context" name="spring.fep.log.jdbc.sqltiming.level" source="spring.fep.log.jdbc.sqltiming.level" defaultValue="DEBUG"/>
+	<springProperty scope="context" name="spring.fep.log.mybatis.level" source="spring.fep.log.mybatis.level" defaultValue="DEBUG"/>
+
+	<property name="LOG_HOME" value="D:/TXTT/joseph/logs" />
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}/%d{yyyy-MM-dd}-log.%i.all.txt.gz</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>100MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level][%logger]|%-60X{ProgramName}|%-300X{message}|%msg%n</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="FILE-SERVICE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}/%d{yyyy-MM-dd}-log.%i.txt.gz</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>100MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level][%logger]|%-30X{ProgramName}|%-300X{message}|%msg%n</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+
+	<logger name="logger" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="FILE-SERVICE" />
+	</logger>
+
+	<root level="INFO">
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
