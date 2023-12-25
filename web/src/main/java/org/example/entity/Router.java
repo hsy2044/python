@@ -7,7 +7,8 @@ import org.apache.commons.lang3.StringUtils;
 public enum Router {
     DEFAULT(StringUtils.EMPTY, StringUtils.EMPTY, "預設頁面", StringUtils.EMPTY),
 
-    LOGIN(StringUtils.EMPTY, StringUtils.EMPTY, "登錄頁面", "login");
+    LOGIN(StringUtils.EMPTY, StringUtils.EMPTY, "登錄頁面", "login"),
+    FIRST(StringUtils.EMPTY, StringUtils.EMPTY, "開始畫面1", "first");
     private String parentId, parentName, name, url, view, code = StringUtils.EMPTY;
     private boolean sub;
 
