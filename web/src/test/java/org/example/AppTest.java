@@ -1,20 +1,18 @@
 package org.example;
 
-import static org.junit.Assert.assertTrue;
 
-import org.junit.Test;
+import org.example.service.TestService;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+@SpringBootTest
+public class AppTest {
+    @Autowired
+    private TestService testService;
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testTestConnection() {
+        testService.testConnection();
     }
 }
