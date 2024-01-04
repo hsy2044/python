@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.0</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.springboot</groupId>
+    <artifactId>pdf</artifactId>
+    <version>01</version>
+    <name>demo</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.linecorp.bot</groupId>
+            <artifactId>line-bot-spring-boot</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <!--		<dependency>-->
+        <!--			<groupId>mysql</groupId>-->
+        <!--			<artifactId>mysql-connector-java</artifactId>-->
+        <!--			<version>8.0.33</version>-->
+        <!--		</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <!--		<dependency>-->
+        <!--			<groupId>org.mybatis.spring.boot</groupId>-->
+        <!--			<artifactId>mybatis-spring-boot-starter</artifactId>-->
+        <!--			<version>3.0.2</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>org.mybatis</groupId>-->
+        <!--			<artifactId>mybatis</artifactId>-->
+        <!--			<version>3.5.13</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>org.mybatis</groupId>-->
+        <!--			<artifactId>mybatis-spring</artifactId>-->
+        <!--			<version>3.0.2</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--            <groupId>mysql</groupId>-->
+        <!--            <artifactId>mysql-connector-java</artifactId>-->
+        <!--            <version>8.0.33</version>-->
+        <!--        </dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>javax.servlet</groupId>-->
+        <!--			<artifactId>javax.servlet-api</artifactId>-->
+        <!--			<version>4.0.1</version>-->
+        <!--		</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--		<dependency>-->
+        <!--			<groupId>org.springframework.boot</groupId>-->
+        <!--			<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+        <!--		</dependency>-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+        <!--		<dependency>-->
+        <!--			<groupId>org.springframework.boot</groupId>-->
+        <!--			<artifactId>spring-boot-starter-log4j2</artifactId>-->
+        <!--		</dependency>-->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.19</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+            <version>1.30.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.oauth-client</groupId>
+            <artifactId>google-oauth-client-jetty</artifactId>
+            <version>1.30.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-main</artifactId>
+            <version>25.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-sheets</artifactId>
+            <version>v4-rev581-1.25.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+        <!-- MQ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-artemis</artifactId>
+            <version>3.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <version>5.18.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>javax.jms-api</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-client-jakarta</artifactId>
+            <version>5.18.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>6.0.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-broker</artifactId>
+            <version>5.12.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.activemq</groupId>
+                    <artifactId>activemq-client</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Crawler-->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.14.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.maps</groupId>
+            <artifactId>google-maps-services</artifactId>
+            <version>0.15.0</version>
+        </dependency>
+        <!-- WebDriver -->
+        <!--		<dependency>-->
+        <!--			<groupId>org.seleniumhq.selenium</groupId>-->
+        <!--			<artifactId>selenium-java</artifactId>-->
+        <!--			<version>4.8.1</version>-->
+        <!--		</dependency>-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+    </dependencies>
+    <!--加入osgeo的倉庫位址 -->
+    <repositories>
+        <repository>
+            <id>osgeo</id>
+            <name>OSGeo Release Repository</name>
+            <url>https://repo.osgeo.org/repository/release/</url>
+            <snapshots><enabled>false</enabled></snapshots>
+            <releases><enabled>true</enabled></releases>
+        </repository>
+        <repository>
+            <id>osgeo-snapshot</id>
+            <name>OSGeo Snapshot Repository</name>
+            <url>https://repo.osgeo.org/repository/snapshot/</url>
+            <snapshots><enabled>true</enabled></snapshots>
+            <releases><enabled>false</enabled></releases>
+        </repository>
+    </repositories>
+    <!-- test-->
+    <!--	<build>-->
+    <!--		<plugins>-->
+    <!--			<plugin>-->
+    <!--				<groupId>org.apache.maven.plugins</groupId>-->
+    <!--				<artifactId>maven-compiler-plugin</artifactId>-->
+    <!--				<configuration>-->
+    <!--					<source>11</source>-->
+    <!--					<target>11</target>-->
+    <!--				</configuration>-->
+    <!--			</plugin>-->
+    <!--		</plugins>-->
+    <!--	</build>-->
+
+    <!-- 一包jar for Mail取檔功能-->
+    <!--	<build>-->
+    <!--		<plugins>-->
+    <!--			<plugin>-->
+    <!--				<groupId>org.apache.maven.plugins</groupId>-->
+    <!--				<artifactId>maven-shade-plugin</artifactId>-->
+    <!--				<version>3.3.0</version>-->
+    <!--				<executions>-->
+    <!--					<execution>-->
+    <!--						<id>shade-jar-with-dependencies</id>-->
+    <!--						<phase>package</phase>-->
+    <!--						<goals>-->
+    <!--							<goal>shade</goal>-->
+    <!--						</goals>-->
+    <!--						<configuration>-->
+    <!--							<shadedArtifactAttached>true</shadedArtifactAttached>-->
+    <!--							<shadedClassifierName>uber</shadedClassifierName>-->
+    <!--							<transformers>-->
+    <!--								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+    <!--									<manifestEntries>-->
+    <!--										<Main-Class>com.springboot.demo.MailApplication</Main-Class>-->
+    <!--									</manifestEntries>-->
+    <!--								</transformer>-->
+    <!--							</transformers>-->
+    <!--						</configuration>-->
+    <!--					</execution>-->
+    <!--				</executions>-->
+    <!--			</plugin>-->
+    <!--		</plugins>-->
+    <!--	</build>-->
+    <!-- 一包jar for PDF功能-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>shade-jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
+                            <shadedClassifierName>uber</shadedClassifierName>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Main-Class>com.springboot.demo.BankApplication</Main-Class>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <!-- 一包jar -->
+    <!--	<build>-->
+    <!--		<plugins>-->
+    <!--			<plugin>-->
+    <!--				<groupId>org.apache.maven.plugins</groupId>-->
+    <!--				<artifactId>maven-shade-plugin</artifactId>-->
+    <!--				<version>3.3.0</version>-->
+    <!--				<executions>-->
+    <!--					<execution>-->
+    <!--						<id>shade-jar-with-dependencies</id>-->
+    <!--						<phase>package</phase>-->
+    <!--						<goals>-->
+    <!--							<goal>shade</goal>-->
+    <!--						</goals>-->
+    <!--                        <configuration>-->
+    <!--                            <shadedArtifactAttached>true</shadedArtifactAttached>-->
+    <!--                            <shadedClassifierName>uber</shadedClassifierName>-->
+    <!--                            <transformers>-->
+    <!--								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+    <!--									<manifestEntries>-->
+    <!--										<Main-Class>com.springboot.demo.Application</Main-Class>-->
+    <!--									</manifestEntries>-->
+    <!--								</transformer>-->
+    <!--							</transformers>-->
+    <!--                        </configuration>-->
+    <!--					</execution>-->
+    <!--				</executions>-->
+    <!--			</plugin>-->
+    <!--		</plugins>-->
+    <!--	</build>-->
+
+    <!-- 一包jar,一包依賴 -->
+    <!--	<build>-->
+    <!--		<plugins>-->
+    <!--			<plugin>-->
+    <!--				<groupId>org.apache.maven.plugins</groupId>-->
+    <!--				<artifactId>maven-surefire-plugin</artifactId>-->
+    <!--				<version>3.0.0-M5</version>-->
+    <!--			</plugin>&lt;!&ndash; 打包jar檔時設定程式進入點 &ndash;&gt;-->
+    <!--			<plugin>-->
+    <!--				<groupId>org.apache.maven.plugins</groupId>-->
+    <!--				<artifactId>maven-jar-plugin</artifactId>-->
+    <!--				<version>3.2.2</version>-->
+    <!--				<configuration>-->
+    <!--					<archive>-->
+    <!--						<manifest>-->
+    <!--							<addClasspath>true</addClasspath>-->
+    <!--							<mainClass>com.springboot.demo.Application</mainClass>-->
+    <!--						</manifest>-->
+    <!--					</archive>-->
+    <!--				</configuration>-->
+    <!--			</plugin>-->
+    <!--			<plugin>-->
+    <!--				<groupId>org.apache.maven.plugins</groupId>-->
+    <!--				<artifactId>maven-shade-plugin</artifactId>-->
+    <!--				<version>3.3.0</version>-->
+    <!--				<executions>-->
+    <!--					<execution>-->
+    <!--						<phase>package</phase>-->
+    <!--						<goals>-->
+    <!--							<goal>shade</goal>-->
+    <!--						</goals>-->
+    <!--					</execution>-->
+    <!--				</executions>-->
+    <!--			</plugin>-->
+    <!--		</plugins>-->
+    <!--	</build>-->
+
+</project>
