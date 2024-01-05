@@ -2,7 +2,12 @@ package org.example;
 
 
 //import org.example.service.TestRepository;
+
+import org.example.mapper.EatExtMapper;
+import org.example.mapper.TestMapper;
+import org.example.model.Eat;
 import org.example.service.TestService;
+import org.example.util.SpringBeanFactoryUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,5 +26,11 @@ public class AppTest {
 //        for (org.example.model.Test test : result) {
 //            System.out.println("查询结果: " + test);
 //        }
+//    }
+
+//    @Test
+//    public void testTestConnection() {
+//        List<Eat> test01=eatMapper.findAll();
+//        System.out.println(test01);
 //    }
 }

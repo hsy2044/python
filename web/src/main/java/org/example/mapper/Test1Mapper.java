@@ -1,6 +1,9 @@
 package org.example.mapper;
 
+import jakarta.annotation.Resource;
+import org.apache.ibatis.annotations.Mapper;
 import org.example.model.Test1;
+@Mapper
 
 public interface Test1Mapper {
     /**

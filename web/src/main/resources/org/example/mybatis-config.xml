@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <typeAliases>
+
+
+    </typeAliases>
+
+    <!-- 配置 MyBatis 的 mappers 映射文件 -->
+    <mappers>
+        <!-- 使用 package 批量配置 -->
+        <package name="org.example.mapper" />
+    </mappers>
+</configuration>

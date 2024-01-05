@@ -1,0 +1,3 @@
+mybatis:
+  mapper-locations: classpath*:org/example/mapper/*.xml
+  type-aliases-package: com.esagent.bean

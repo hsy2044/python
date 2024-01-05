@@ -26,13 +26,13 @@
             <property name="trimStrings" value="false"/>
             <property name="immutable" value="false"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="org.example.mapper.xml" targetProject="src\main\java">
+        <sqlMapGenerator targetPackage="org.example.mapper" targetProject="src\main\resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
         <javaClientGenerator type="XMLMAPPER" targetPackage="org.example.mapper" targetProject="src\main\java">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
-        <table schema="dbo" tableName="TEST" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
-        <table schema="dbo" tableName="TEST1" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+        <table schema="dbo" tableName="DRINK" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+<!--        <table schema="dbo" tableName="TEST1" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
     </context>
 </generatorConfiguration>

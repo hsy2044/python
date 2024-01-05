@@ -8,17 +8,39 @@
 <body >
 <div>
     <form action="/submitChoices" method="post">
-        <p style="font-size: 20px;">選擇你感興趣的學校與科系：</p>
-        <input type="checkbox" id="electrical" name="college" value="台大電機">
-        <label for="electrical">台大電機</label><br>
-        <input type="checkbox" id="management" name="college" value="台大資管">
-        <label for="management">台大資管</label><br>
-        <input type="checkbox" id="statistics" name="college" value="台大統計">
-        <label for="statistics">台大統計</label><br>
-        <input type="checkbox" id="math" name="college" value="台大數學">
-        <label for="math">台大數學</label><br>
-        <button type="submit">提交</button>
+        <p style="font-size: 24px;">选择：</p>
+        <div style="display: flex;">
+            <div style="flex: 1; padding-right: 20px;">
+                <p style="font-size: 24px;">eat：</p>
+                <div th:each="eatcollege, iterStat : ${eatcolleges}">
+                    <input type="checkbox" th:id="${'eatcollege' + iterStat.index}" th:name="eatcollege" th:value="${eatcollege.name}" style="font-size: 24px;">
+                    <label th:for="${'eatcollege' + iterStat.index}" th:text="${eatcollege.name}" style="font-size: 24px;">College Name</label><br>
+                </div>
+            </div>
+            <div style="flex: 1; padding-left: 20px;">
+                <p style="font-size: 24px;">drink：</p>
+                <div th:each="drinkcollege, iterStat : ${drinkcolleges}">
+                    <input type="checkbox" th:id="${'drinkcollege' + iterStat.index}" th:name="drinkcollege" th:value="${drinkcollege.name}" style="font-size: 24px;">
+                    <label th:for="${'drinkcollege' + iterStat.index}" th:text="${drinkcollege.name}" style="font-size: 24px;">College Name</label><br>
+                </div>
+            </div>
+        </div>
+        <button type="submit" style="font-size: 24px; margin-top: 20px;">提交</button>
     </form>
 </div>
+<!--<div>-->
+<!--    <form action="/submitChoices" method="post">-->
+<!--        <p style="font-size: 24px;">eat：</p>-->
+<!--        <div th:each="eatcollege, iterStat : ${eatcolleges}">-->
+<!--            <input type="checkbox" th:id="${'eatcollege' + iterStat.index}" th:name="eatcollege" th:value="${eatcollege.name}" style="font-size: 24px;">-->
+<!--            <label th:for="${'eatcollege' + iterStat.index}" th:text="${eatcollege.name}" style="font-size: 24px;">College Name</label><br>-->
+<!--        </div>-->
+<!--        <div th:each="drinkcollege, iterStat : ${drinkcolleges}">-->
+<!--            <input type="checkbox" th:id="${'drinkcollege' + iterStat.index}" th:name="drinkcollege" th:value="${drinkcollege.name}" style="font-size: 24px;">-->
+<!--            <label th:for="${'drinkcollege' + iterStat.index}" th:text="${drinkcollege.name}" style="font-size: 24px;">College Name</label><br>-->
+<!--        </div>-->
+<!--        <button type="submit">提交</button>-->
+<!--    </form>-->
+<!--</div>-->
 </body>
 </html>
