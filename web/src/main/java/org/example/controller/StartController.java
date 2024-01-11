@@ -34,11 +34,12 @@ public class StartController extends BaseController {
     }
     @PostMapping("/submitChoices")
     @ResponseBody
-    public String handleChoices(@RequestParam("eatcollege") String[] eatcolleges,@RequestParam("drinkcollege") String[] drinkcolleges) {
+    public String handleChoices(@RequestParam(value = "eatcollege", required = false) String[] eatcolleges,@RequestParam(value = "drinkcollege", required = false) String[] drinkcolleges) {
         String selectedEatCollege ="";
         String selectedDrinkCollege ="";
         if (eatcolleges == null || eatcolleges.length == 0) {
             System.out.println("未選擇食物");
+            selectedEatCollege = "無";
         }else{
             Random random = new Random();
             selectedEatCollege = eatcolleges[random.nextInt(eatcolleges.length)];
@@ -47,6 +48,7 @@ public class StartController extends BaseController {
 
         if (drinkcolleges == null || drinkcolleges.length == 0) {
             System.out.println("未選擇飲品");
+            selectedDrinkCollege="無";
         }else{
             Random random = new Random();
             selectedDrinkCollege = drinkcolleges[random.nextInt(drinkcolleges.length)];

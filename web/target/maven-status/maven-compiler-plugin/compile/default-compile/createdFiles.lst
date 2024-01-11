@@ -1,4 +1,5 @@
 org\example\base\LogHelper.class
+org\example\mapper\DrinkExtMapper.class
 org\example\util\SpringBeanFactoryUtil.class
 org\example\mapper\DrinkMapper.class
 org\example\entity\Router.class
