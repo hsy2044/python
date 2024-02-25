@@ -9,3 +9,5 @@ CREATE TABLE DRINK (
     isOPEN INT,
     PRIMARY KEY (NAME)
 );
+
+test
